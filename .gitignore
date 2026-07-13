@@ -22,3 +22,13 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# AI assistant tooling
+.agents/
+.ai/
+.claude/
+.codex/
+.cursor/
+.gemini/
+.superpowers/
+docs/superpowers/
