@@ -36,8 +36,8 @@ i18n.use(initReactI18next).init({
           joinUs: 'с нами',
         },
         multiplyButtons: {
-          mediaBuyers: 'в к команду',
-          business: 'Запустить проект',
+          mediaBuyers: 'в команду',
+          business: 'запустить проект',
           partners: 'стать партнёром',
         },
       },
