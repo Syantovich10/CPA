@@ -2,6 +2,9 @@ export const HEADING_STYLES = {
   h1: 'font-halvar text-[38px] leading-[90%] font-bold',
   h2: 'font-halvar text-[20px] leading-[90%] font-bold',
   h3: 'font-halvar text-[28px] leading-[28px] font-bold',
+
+  halvar180Bold:
+    'font-halvar text-[180px] leading-[80%] tracking-[-1.04px] font-bold',
 }
 
 export const TEXT_STYLES = {
@@ -14,6 +17,9 @@ export const TEXT_STYLES = {
   halvar32Bold: 'font-halvar text-[32px] font-bold',
 
   halvar35Light: 'font-halvar text-[35px] leading-normal font-light',
+
+  halvar80Bold:
+    'font-halvar text-[80px] leading-[90%] tracking-[-1.74px] font-bold',
 
   stolzl14Light: 'font-stolzl text-[14px] font-light',
 
