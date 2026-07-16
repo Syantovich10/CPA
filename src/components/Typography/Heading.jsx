@@ -1,4 +1,4 @@
-import { HEADING_VARIANTS } from './typography'
+import { HEADING_VARIANTS } from '../../config/typography'
 
 function Heading({
   as: Component,

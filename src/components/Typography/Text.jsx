@@ -1,4 +1,4 @@
-import { TEXT_VARIANTS, TEXT_WEIGHTS } from './typography'
+import { TEXT_VARIANTS, TEXT_WEIGHTS } from '../../config/typography'
 
 function Text({
   as: Component,
