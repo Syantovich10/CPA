@@ -1,6 +1,6 @@
 export const BUTTON_CLASSES = [
-  'group relative isolate inline-grid h-[85px] w-max min-w-[180px] place-items-center',
-  'appearance-none border-0 bg-transparent px-14 py-0',
+  'group relative isolate inline-grid place-items-center',
+  'appearance-none border-0 bg-transparent',
   'font-semibold uppercase tracking-[0.24em] text-[#0c090e]',
   'transition-colors duration-75 hover:text-[#fee97d]',
   'focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-4 focus-visible:outline-[#0c090e]',
@@ -20,4 +20,4 @@ export const BUTTON_STROKE_CLASSES = [
   'transition-colors duration-75 group-hover:stroke-[#fee97d]',
 ].join(' ')
 
-export const BUTTON_TEXT_CLASSES = 'relative z-10 whitespace-nowrap'
+export const BUTTON_TEXT_CLASSES = 'relative z-10'
