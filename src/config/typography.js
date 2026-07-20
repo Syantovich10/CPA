@@ -14,6 +14,8 @@ export const TEXT_STYLES = {
 
   halvar20Bold: 'font-halvar text-[20px] leading-[24px] font-bold',
 
+  halvar24Bold: 'font-halvar text-[24px] font-bold',
+
   halvar32Bold: 'font-halvar text-[32px] font-bold',
 
   halvar35Light: 'font-halvar text-[35px] leading-normal font-light',
