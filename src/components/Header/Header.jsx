@@ -3,8 +3,13 @@ import { TEXT_STYLES } from '../../config/typography'
 
 function Header({ isOpen = false, onToggle }) {
   return (
-    <header className="flex items-center justify-between bg-purple px-[10px] pt-[10px]">
-      <img src={logoMobile} alt="Logo" width={27} height={24} />
+    <header className="flex items-center justify-between bg-purple-dark px-[10px] py-[10px]">
+      <img
+        src={logoMobile}
+        alt="Logo"
+        width={isOpen ? 43 : 27}
+        height={isOpen ? 40 : 24}
+      />
 
       <button
         type="button"
