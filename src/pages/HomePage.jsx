@@ -1,5 +1,7 @@
+import HeaderSection from '@/sections/HeaderSection/HeaderSection'
+
 function HomePage() {
-  return null
+  return <HeaderSection />
 }
 
 export default HomePage
