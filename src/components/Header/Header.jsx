@@ -1,5 +1,5 @@
-import logoMobile from '../../../assets/logo/logo-mobile.svg'
-import { TEXT_STYLES } from '../../config/typography'
+import logoMobile from '@/assets/logo/logo-mobile.svg'
+import { TEXT_STYLES } from '@/config/typography'
 
 function Header({ isOpen = false, onToggle }) {
   return (

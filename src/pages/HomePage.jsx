@@ -1,15 +1,7 @@
-import { useState } from 'react'
-import Header from '../components/Header/Header'
+import HeaderSection from '@/sections/HeaderSection/HeaderSection'
 
 function HomePage() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-
-  return (
-    <Header
-      isOpen={isMenuOpen}
-      onToggle={() => setIsMenuOpen((prev) => !prev)}
-    />
-  )
+  return <HeaderSection />
 }
 
 export default HomePage
