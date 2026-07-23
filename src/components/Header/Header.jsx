@@ -1,6 +1,7 @@
 import logoMobile from '@/assets/logo/logo-mobile.svg'
 import { TEXT_STYLES } from '@/config/typography'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
 const NAV_ITEMS = [
   { translationKey: 'team', href: '#team' },
@@ -18,13 +19,15 @@ function Header({ isOpen = false, onToggle }) {
 
   return (
     <header className="flex items-center justify-between bg-purple-dark px-[10px] py-[10px] lg:absolute lg:top-0 lg:z-50 lg:w-full lg:bg-transparent lg:px-[50px] lg:py-[30px]">
-      <img
-        src={logoMobile}
-        alt="Logo"
-        width={isOpen ? 43 : 27}
-        height={isOpen ? 40 : 24}
-        className="lg:h-[41px] lg:w-[45px]"
-      />
+      <Link to="/" aria-label={t('accessibility.home')}>
+        <img
+          src={logoMobile}
+          alt=""
+          width={isOpen ? 43 : 27}
+          height={isOpen ? 40 : 24}
+          className="lg:h-[41px] lg:w-[45px]"
+        />
+      </Link>
 
       <button
         type="button"
