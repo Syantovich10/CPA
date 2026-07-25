@@ -1,13 +1,8 @@
 import logoMobile from '@/assets/logo/logo-mobile.svg'
+import { NAV_ITEMS } from '@/config/navigation'
 import { TEXT_STYLES } from '@/config/typography'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
-
-const NAV_ITEMS = [
-  { translationKey: 'team', href: '#team' },
-  { translationKey: 'benefits', href: '#benefits' },
-  { translationKey: 'joinUs', href: '#join-us' },
-]
 
 function Header({ isOpen = false, onToggle }) {
   const { t, i18n } = useTranslation()
