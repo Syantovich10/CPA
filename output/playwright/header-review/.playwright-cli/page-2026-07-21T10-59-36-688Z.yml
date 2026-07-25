@@ -1,0 +1,85 @@
+- generic [active] [ref=f1e1]:
+    - banner [ref=f1e2]:
+        - generic [ref=f1e3]:
+            - link [ref=f1e5] [cursor=pointer]:
+                - /url: https://imgbb.com
+                - img "ImgBB" [ref=f1e6]
+            - list [ref=f1e7]:
+                - text: 
+                - listitem [ref=f1e8] [cursor=pointer]:
+                    - generic [ref=f1e9]:
+                        - generic [ref=f1e10]: 
+                        - text: Информация
+                    - text:     
+            - list [ref=f1e12]:
+                - listitem [ref=f1e13] [cursor=pointer]:
+                    - link " Загрузить" [ref=f1e14]:
+                        - /url: https://imgbb.com/upload
+                        - generic [ref=f1e15]:
+                            - generic [ref=f1e16]: 
+                            - text: Загрузить
+                - listitem [ref=f1e17] [cursor=pointer]:
+                    - link " Войти" [ref=f1e18]:
+                        - /url: https://imgbb.com/login
+                        - generic [ref=f1e19]: 
+                        - text: Войти
+    - img "image" [ref=f1e22]
+    - generic [ref=f1e23]:
+        - generic [ref=f1e24]:
+            - generic [ref=f1e26]:
+                - generic: 
+                - generic [ref=f1e28] [cursor=pointer]:
+                    - generic [ref=f1e29]: 
+                    - text: Редактировать
+                - generic [ref=f1e31] [cursor=pointer]:
+                    - generic [ref=f1e32]: 
+                    - text: Удалить
+            - generic [ref=f1e33]:
+                - link "" [ref=f1e34] [cursor=pointer]:
+                    - /url: https://i.ibb.co/1tKH1dsH/image.png
+                - link " Нравится":
+                    - /url: https://imgbb.com/login
+                    - generic [ref=f1e36] [cursor=pointer]:
+                        - generic [ref=f1e37]: 
+                        - text: Нравится
+                - generic [ref=f1e38] [cursor=pointer]:
+                    - generic [ref=f1e39]: 
+                    - text: Поделиться
+        - generic [ref=f1e40]:
+            - generic [ref=f1e41]: 
+            - generic [ref=f1e46]: 0 просмотров
+        - heading [level=1] [ref=f1e49]:
+            - link "image" [ref=f1e50] [cursor=pointer]:
+                - /url: https://ibb.co/dw6nFLbn
+        - paragraph [ref=f1e51]: Загружено 7 минут назад
+        - generic [ref=f1e52]:
+            - text:   
+            - list [ref=f1e53]:
+                - listitem [ref=f1e54]:
+                    - link " Коды для встраивания" [ref=f1e55] [cursor=pointer]:
+                        - /url: ''
+                        - generic [ref=f1e56]: 
+                        - text: Коды для встраивания
+        - generic [ref=f1e59]:
+            - generic [ref=f1e60]:
+                - heading "Прямые ссылки" [level=4] [ref=f1e61]
+                - generic [ref=f1e62]:
+                    - heading "Ссылка на изображение" [level=4] [ref=f1e63]
+                    - textbox [ref=f1e65]: https://ibb.co/dw6nFLbn
+            - generic [ref=f1e66]:
+                - heading "Код изображения оригинального размера со ссылкой" [level=4] [ref=f1e67]
+                - generic [ref=f1e68]:
+                    - heading "HTML" [level=4] [ref=f1e69]
+                    - textbox [ref=f1e71]: <a href="https://ibb.co/dw6nFLbn"><img src="https://i.ibb.co/cStz0Cbz/image.png" alt="image" border="0" /></a>
+                - generic [ref=f1e72]:
+                    - heading "BBCode" [level=4] [ref=f1e73]
+                    - textbox [ref=f1e75]: '[url=https://ibb.co/dw6nFLbn][img]https://i.ibb.co/cStz0Cbz/image.png[/img][/url]'
+            - generic [ref=f1e76]:
+                - heading "Код миниатюры со ссылкой" [level=4] [ref=f1e77]
+                - generic [ref=f1e78]:
+                    - heading "HTML" [level=4] [ref=f1e79]
+                    - textbox [ref=f1e81]: <a href="https://ibb.co/dw6nFLbn"><img src="https://i.ibb.co/dw6nFLbn/image.png" alt="image" border="0" /></a>
+                - generic [ref=f1e82]:
+                    - heading "BBCode" [level=4] [ref=f1e83]
+                    - textbox [ref=f1e85]: '[url=https://ibb.co/dw6nFLbn][img]https://i.ibb.co/dw6nFLbn/image.png[/img][/url]'
+    - text: () ()         

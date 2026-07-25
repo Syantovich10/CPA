@@ -1,0 +1,85 @@
+- generic [active] [ref=e1]:
+    - banner [ref=e2]:
+        - generic [ref=e3]:
+            - link [ref=e5] [cursor=pointer]:
+                - /url: https://imgbb.com
+                - img "ImgBB" [ref=e6]
+            - list [ref=e7]:
+                - text: 
+                - listitem [ref=e8] [cursor=pointer]:
+                    - generic [ref=e9]:
+                        - generic [ref=e10]: 
+                        - text: Информация
+                    - text:     
+            - list [ref=e12]:
+                - listitem [ref=e13] [cursor=pointer]:
+                    - link " Загрузить" [ref=e14]:
+                        - /url: https://imgbb.com/upload
+                        - generic [ref=e15]:
+                            - generic [ref=e16]: 
+                            - text: Загрузить
+                - listitem [ref=e17] [cursor=pointer]:
+                    - link " Войти" [ref=e18]:
+                        - /url: https://imgbb.com/login
+                        - generic [ref=e19]: 
+                        - text: Войти
+    - img "image" [ref=e22]
+    - generic [ref=e23]:
+        - generic [ref=e24]:
+            - generic [ref=e26]:
+                - generic: 
+                - generic [ref=e28] [cursor=pointer]:
+                    - generic [ref=e29]: 
+                    - text: Редактировать
+                - generic [ref=e31] [cursor=pointer]:
+                    - generic [ref=e32]: 
+                    - text: Удалить
+            - generic [ref=e33]:
+                - link "" [ref=e34] [cursor=pointer]:
+                    - /url: https://i.ibb.co/G31CVYF3/image.png
+                - link " Нравится":
+                    - /url: https://imgbb.com/login
+                    - generic [ref=e36] [cursor=pointer]:
+                        - generic [ref=e37]: 
+                        - text: Нравится
+                - generic [ref=e38] [cursor=pointer]:
+                    - generic [ref=e39]: 
+                    - text: Поделиться
+        - generic [ref=e40]:
+            - generic [ref=e41]: 
+            - generic [ref=e46]: 0 просмотров
+        - heading [level=1] [ref=e49]:
+            - link "image" [ref=e50] [cursor=pointer]:
+                - /url: https://ibb.co/YTKftnbT
+        - paragraph [ref=e51]: Загружено 6 минут назад
+        - generic [ref=e52]:
+            - text:   
+            - list [ref=e53]:
+                - listitem [ref=e54]:
+                    - link " Коды для встраивания" [ref=e55] [cursor=pointer]:
+                        - /url: ''
+                        - generic [ref=e56]: 
+                        - text: Коды для встраивания
+        - generic [ref=e59]:
+            - generic [ref=e60]:
+                - heading "Прямые ссылки" [level=4] [ref=e61]
+                - generic [ref=e62]:
+                    - heading "Ссылка на изображение" [level=4] [ref=e63]
+                    - textbox [ref=e65]: https://ibb.co/YTKftnbT
+            - generic [ref=e66]:
+                - heading "Код изображения оригинального размера со ссылкой" [level=4] [ref=e67]
+                - generic [ref=e68]:
+                    - heading "HTML" [level=4] [ref=e69]
+                    - textbox [ref=e71]: <a href="https://imgbb.com/"><img src="https://i.ibb.co/G31CVYF3/image.png" alt="image" border="0" /></a>
+                - generic [ref=e72]:
+                    - heading "BBCode" [level=4] [ref=e73]
+                    - textbox [ref=e75]: '[url=https://imgbb.com/][img]https://i.ibb.co/G31CVYF3/image.png[/img][/url]'
+            - generic [ref=e76]:
+                - heading "Код миниатюры со ссылкой" [level=4] [ref=e77]
+                - generic [ref=e78]:
+                    - heading "HTML" [level=4] [ref=e79]
+                    - textbox [ref=e81]: <a href="https://ibb.co/YTKftnbT"><img src="https://i.ibb.co/YTKftnbT/image.png" alt="image" border="0" /></a>
+                - generic [ref=e82]:
+                    - heading "BBCode" [level=4] [ref=e83]
+                    - textbox [ref=e85]: '[url=https://ibb.co/YTKftnbT][img]https://i.ibb.co/YTKftnbT/image.png[/img][/url]'
+    - text: () ()         
