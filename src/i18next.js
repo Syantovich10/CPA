@@ -5,6 +5,9 @@ i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
+        accessibility: {
+          home: 'Home',
+        },
         hero: {
           description:
             'We provide effective solutions, tested and refined on our own products and ad budgets',
@@ -25,6 +28,9 @@ i18n.use(initReactI18next).init({
 
     ru: {
       translation: {
+        accessibility: {
+          home: 'На главную',
+        },
         hero: {
           description:
             'Предлагаем эффективные решения, которые уже протестили на своих продуктах и бюджетах',
