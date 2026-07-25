@@ -33,6 +33,7 @@ dist-ssr
 .codex/
 .cursor/
 .output/
+output/
 .gemini/
 .superpowers/
 docs/superpowers/
