@@ -7,6 +7,10 @@ i18n.use(initReactI18next).init({
       translation: {
         accessibility: {
           home: 'Home',
+          openMenu: 'Open menu',
+          closeMenu: 'Close menu',
+          mainNavigation: 'Main navigation',
+          languageSelection: 'Language selection',
         },
         hero: {
           description:
@@ -14,6 +18,7 @@ i18n.use(initReactI18next).init({
           button: 'get in touch',
         },
         nav: {
+          main: 'main',
           team: 'team',
           benefits: 'benefits',
           joinUs: 'join us',
@@ -30,6 +35,10 @@ i18n.use(initReactI18next).init({
       translation: {
         accessibility: {
           home: 'На главную',
+          openMenu: 'Открыть меню',
+          closeMenu: 'Закрыть меню',
+          mainNavigation: 'Основная навигация',
+          languageSelection: 'Выбор языка',
         },
         hero: {
           description:
@@ -37,6 +46,7 @@ i18n.use(initReactI18next).init({
           button: 'получить профит',
         },
         nav: {
+          main: 'главная',
           team: 'команда',
           benefits: 'преимущества',
           joinUs: 'с нами',
