@@ -1,7 +1,7 @@
-import HeaderSection from '@/sections/HeaderSection/HeaderSection'
+import HeroSection from '@/sections/HeroSection/HeroSection'
 
 function HomePage() {
-  return <HeaderSection />
+  return <HeroSection />
 }
 
 export default HomePage
