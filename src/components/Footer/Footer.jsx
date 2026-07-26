@@ -1,7 +1,10 @@
 import arrowIcon from '@/assets/icons/arrow.svg'
+import { useTranslation } from 'react-i18next'
 import { TEXT_STYLES } from '@/config/typography.js'
 
 function Footer() {
+  const { t } = useTranslation()
+
   const linkClass = `
     ${TEXT_STYLES.halvar20Bold}
     text-yellow
@@ -42,7 +45,7 @@ function Footer() {
         </div>
 
         <a href="#top" className={linkClass}>
-          <span className="underline">scroll to top</span>
+          <span className="underline">{t('footer.scrollTop')}</span>
           <img
             src={arrowIcon}
             alt="arrowTop"
