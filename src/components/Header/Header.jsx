@@ -2,15 +2,47 @@ import logoMobile from '@/assets/logo/logo-mobile.svg'
 import MobileMenu from '@/components/Header/MobileMenu'
 import { NAV_ITEMS } from '@/config/navigation'
 import { TEXT_STYLES } from '@/config/typography'
-import { useEffect, useRef } from 'react'
+import useBodyScrollLock from '@/hooks/useBodyScrollLock'
+import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-function Header({ isOpen = false, onToggle, onClose }) {
+function Header() {
   const { t, i18n } = useTranslation()
+  const [isOpen, setIsOpen] = useState(false)
   const currentLanguage = i18n.resolvedLanguage ?? i18n.language
   const headerRef = useRef(null)
   const menuButtonRef = useRef(null)
+
+  useBodyScrollLock(isOpen)
+
+  useEffect(() => {
+    if (!isOpen) {
+      return undefined
+    }
+
+    const desktopMedia = window.matchMedia('(min-width: 1024px)')
+
+    const handleKeyDown = (event) => {
+      if (event.key === 'Escape') {
+        setIsOpen(false)
+      }
+    }
+
+    const handleBreakpointChange = (event) => {
+      if (event.matches) {
+        setIsOpen(false)
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    desktopMedia.addEventListener('change', handleBreakpointChange)
+
+    return () => {
+      document.removeEventListener('keydown', handleKeyDown)
+      desktopMedia.removeEventListener('change', handleBreakpointChange)
+    }
+  }, [isOpen])
 
   useEffect(() => {
     if (!isOpen) {
@@ -64,6 +96,14 @@ function Header({ isOpen = false, onToggle, onClose }) {
     void i18n.changeLanguage(language)
   }
 
+  const handleMenuToggle = () => {
+    setIsOpen((isMenuOpen) => !isMenuOpen)
+  }
+
+  const handleMenuClose = () => {
+    setIsOpen(false)
+  }
+
   return (
     <header
       ref={headerRef}
@@ -91,7 +131,7 @@ function Header({ isOpen = false, onToggle, onClose }) {
         <button
           ref={menuButtonRef}
           type="button"
-          onClick={onToggle}
+          onClick={handleMenuToggle}
           aria-label={
             isOpen ? t('accessibility.closeMenu') : t('accessibility.openMenu')
           }
@@ -111,7 +151,7 @@ function Header({ isOpen = false, onToggle, onClose }) {
         <MobileMenu
           currentLanguage={currentLanguage}
           onChangeLanguage={changeLanguage}
-          onClose={onClose}
+          onClose={handleMenuClose}
         />
       )}
 
