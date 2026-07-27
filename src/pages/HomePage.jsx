@@ -1,7 +1,7 @@
-import HeaderSection from '@/sections/HeaderSection/HeaderSection'
+import Header from '@/components/Header/Header'
 
 function HomePage() {
-  return <HeaderSection />
+  return <Header />
 }
 
 export default HomePage
