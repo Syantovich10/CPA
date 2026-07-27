@@ -1,13 +1,7 @@
-import HeaderSection from '@/sections/HeaderSection/HeaderSection'
-import Footer from '@/components/Footer/Footer.jsx'
+import Header from '@/components/Header/Header'
 
 function HomePage() {
-  return (
-    <div>
-      <HeaderSection />
-      <Footer></Footer>
-    </div>
-  )
+  return <Header />
 }
 
 export default HomePage
