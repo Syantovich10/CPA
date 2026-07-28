@@ -21,7 +21,7 @@ function Header() {
       return undefined
     }
 
-    const desktopMedia = window.matchMedia('(min-width: 1024px)')
+    const desktopMedia = window.matchMedia('(min-width: 768px)')
 
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
@@ -115,7 +115,7 @@ function Header() {
         isOpen
           ? 'fixed inset-0 z-50 flex h-dvh flex-col overflow-y-auto'
           : 'flex items-center justify-between'
-      } lg:absolute lg:inset-x-0 lg:top-0 lg:z-50 lg:flex lg:h-auto lg:w-full lg:flex-row lg:items-center lg:justify-between lg:overflow-visible lg:bg-transparent lg:px-[50px] lg:py-[30px]`}
+      } md:absolute md:inset-x-0 md:top-0 md:z-50 md:flex md:h-auto md:w-full md:flex-row md:items-center md:justify-between md:overflow-visible md:bg-transparent md:px-[50px] md:py-[30px]`}
     >
       <div className="flex w-full items-center justify-between">
         <Link to="/" aria-label={t('accessibility.home')}>
@@ -124,7 +124,7 @@ function Header() {
             alt=""
             width={isOpen ? 43 : 27}
             height={isOpen ? 40 : 24}
-            className="lg:h-[41px] lg:w-[45px]"
+            className="md:h-[41px] md:w-[45px]"
           />
         </Link>
 
@@ -137,7 +137,7 @@ function Header() {
           }
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
-          className={`lg:hidden ${
+          className={`md:hidden ${
             isOpen
               ? `${TEXT_STYLES.halvar24Bold} text-yellow`
               : `${TEXT_STYLES.halvar16Bold} text-yellow uppercase underline decoration-yellow underline-offset-2`
@@ -157,7 +157,7 @@ function Header() {
 
       <nav
         aria-label={t('accessibility.mainNavigation')}
-        className={`${TEXT_STYLES.halvar16Bold} hidden items-center gap-[30px] whitespace-nowrap text-yellow uppercase lg:flex`}
+        className={`${TEXT_STYLES.halvar16Bold} hidden items-center gap-[30px] whitespace-nowrap text-yellow uppercase md:flex`}
       >
         {NAV_ITEMS.map(({ translationKey, href }) => (
           <a

@@ -1,27 +1,7 @@
-import instagramIcon from '@/assets/icons/insticon.svg'
-import linkedinIcon from '@/assets/icons/linkedicon.svg'
-import telegramIcon from '@/assets/icons/telegicon.svg'
 import { MOBILE_NAV_ITEMS } from '@/config/navigation'
+import { SOCIAL_LINKS } from '@/config/socialLinks'
 import { TEXT_STYLES } from '@/config/typography'
 import { useTranslation } from 'react-i18next'
-
-const SOCIAL_LINKS = [
-  {
-    label: 'Instagram',
-    href: 'https://www.instagram.com/',
-    icon: instagramIcon,
-  },
-  {
-    label: 'Telegram',
-    href: 'https://telegram.org/',
-    icon: telegramIcon,
-  },
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/',
-    icon: linkedinIcon,
-  },
-]
 
 function MobileMenu({ currentLanguage, onChangeLanguage, onClose }) {
   const { t } = useTranslation()
@@ -36,7 +16,7 @@ function MobileMenu({ currentLanguage, onChangeLanguage, onClose }) {
   return (
     <div
       id="mobile-menu"
-      className="flex min-h-0 w-full flex-1 overflow-y-auto px-[10px] lg:hidden"
+      className="flex min-h-0 w-full flex-1 overflow-y-auto px-[10px] md:hidden"
     >
       <div className="my-auto flex w-full flex-col items-center py-[30px] text-center">
         <nav aria-label={t('accessibility.mainNavigation')}>
