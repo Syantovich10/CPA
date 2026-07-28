@@ -10,12 +10,14 @@ function Footer() {
     text-yellow
     uppercase
     whitespace-nowrap
+    group
+    hover:text-white
   `
 
   const underlinedLinkClass = `${linkClass} underline`
 
   return (
-    <footer className="hidden lg:block">
+    <footer className="hidden md:block bg-dark">
       <div
         className="
           mx-auto
@@ -49,7 +51,7 @@ function Footer() {
           <img
             src={arrowIcon}
             alt="arrowTop"
-            className="ml-2 inline-block size-7.5 pb-1.5"
+            className="ml-2 inline-block size-7.5 pb-1.5 group-hover:brightness-0 group-hover:invert"
           />
         </a>
       </div>
