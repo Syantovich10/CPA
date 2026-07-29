@@ -1,6 +1,7 @@
 import arrowIcon from '@/assets/icons/arrow.svg'
 import { useTranslation } from 'react-i18next'
 import { TEXT_STYLES } from '@/config/typography.js'
+import { SOCIAL_LINKS } from '@/config/socialLinks.js'
 
 function Footer() {
   const { t } = useTranslation()
@@ -33,17 +34,11 @@ function Footer() {
         "
       >
         <div className="flex items-center gap-4 sm:gap-6 lg:gap-8">
-          <a href="#" className={underlinedLinkClass}>
-            instagram
-          </a>
-
-          <a href="#" className={underlinedLinkClass}>
-            telegram
-          </a>
-
-          <a href="#" className={underlinedLinkClass}>
-            linkedin
-          </a>
+          {SOCIAL_LINKS.map(({ label, href }) => (
+            <a href={href} key={label} className={underlinedLinkClass}>
+              {label}
+            </a>
+          ))}
         </div>
 
         <a href="#top" className={linkClass}>
