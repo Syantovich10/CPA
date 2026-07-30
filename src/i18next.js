@@ -28,6 +28,37 @@ i18n.use(initReactI18next).init({
           business: 'launch now',
           partners: 'partner up',
         },
+        multiTasks: {
+          introBefore: 'We run an ',
+          introHighlight: 'in-house team',
+          introAfter:
+            ' of media buyers, designers, creatives, developers, and copywriters — no middlemen, no outsourcing',
+          features: {
+            infrastructure: {
+              title: 'Flexible infrastructure',
+              description:
+                'Custom tools, fast integrations and scalable architecture',
+            },
+            creatives: {
+              title: 'High-performing creatives',
+              description: 'Scroll-stopping ads tailored to your vertical',
+            },
+            copywriting: {
+              title: 'Compelling copywriting',
+              description:
+                'Messaging that hooks, sells, and drives funnel growth',
+            },
+            mediaBuying: {
+              title: 'Adaptive media buying',
+              description: 'No wasted budgets - we test, tweak, and scale',
+            },
+            support: {
+              title: 'Full-cycle support',
+              description:
+                'From setup to scaling - we support you every step of the way',
+            },
+          },
+        },
         footer: {
           scrollTop: 'scroll to top',
         },
@@ -58,6 +89,38 @@ i18n.use(initReactI18next).init({
           mediaBuyers: 'в команду',
           business: 'запустить проект',
           partners: 'стать партнёром',
+        },
+        multiTasks: {
+          introBefore: 'У нас есть своя команда байеров, дизайнеров, креаторов, разработчиков, чтобы закрыть любой запрос',
+          introHighlight: ' in-house',
+          introAfter:
+            ': без посредников и подрядчиков',
+          features: {
+            infrastructure: {
+              title: 'Гибкая инфраструктура',
+              description:
+                'Кастомные решения, моментальные интеграции, масштабирование',
+            },
+            creatives: {
+              title: 'Конверсионные креативы',
+              description: 'Креативы, которые цепляют с первого взгляда',
+            },
+            copywriting: {
+              title: 'Притягательный копирайтинг',
+              description:
+                'Тексты, которые конвертят на каждом этапе воронки',
+            },
+            mediaBuying: {
+              title: 'Адаптивный медиабаинг',
+              description:
+                'Оптимизация в реальном времени: максимум ROI — минимум затрат',
+            },
+            support: {
+              title: 'Всесторонняя поддержка',
+              description:
+                'От идеи до масштабирования — мы рядом на каждом этапе',
+            },
+          },
         },
         footer: {
           scrollTop: 'наверх',
