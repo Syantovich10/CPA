@@ -8,7 +8,7 @@ function FeatureCard({ translationKey }) {
   const { t } = useTranslation()
 
   return (
-    <div className="flex flex-1 flex-col gap-3 rounded-3xl bg-purple px-6 py-7 sm:px-8 sm:py-8">
+    <div className="flex flex-1 flex-col gap-3 rounded-[8px] bg-purple px-[10px] py-[10px] pb-[20px] sm:px-8 sm:py-8">
       <h3 className={`${HEADING_STYLES.h2} text-yellow uppercase`}>
         {t(`multiTasks.features.${translationKey}.title`)}
       </h3>
@@ -24,18 +24,18 @@ function MultiTasks() {
   const [secondColumn, thirdColumn] = MULTI_TASKS_COLUMNS
 
   return (
-    <Section id="multi-tasks" className="bg-dark">
+    <Section id="multi-tasks" className="bg-dark lg:pb-[125px]">
       <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-8">
         <h2
-          className={`${TEXT_STYLES.halvar32Bold} self-end text-yellow uppercase`}
+          className={`${TEXT_STYLES.halvar32Bold} hidden self-end text-yellow uppercase lg:block`}
         >
           multi-tasks
         </h2>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.5fr_1fr_1fr] lg:items-stretch">
-          <div className="flex flex-col justify-between gap-8 rounded-3xl bg-purple p-8">
+          <div className="flex flex-col justify-between gap-8 rounded-[8px] bg-purple bg-[linear-gradient(65deg,#9500DC_17.61%,#560080_57.18%,#220032_88.56%)]  px-[10px] py-[20px] pb-[0] sm:px-8 sm:py-8">
             <p
-              className={`${TEXT_STYLES.stolzl20Regular} max-w-[420px] text-white`}
+              className={`${TEXT_STYLES.halvar20Bold} max-w-[420px] text-white`}
             >
               {t('multiTasks.introBefore')}
               <span className="text-yellow">
@@ -69,6 +69,12 @@ function MultiTasks() {
             ))}
           </div>
         </div>
+
+        <p
+          className={`${TEXT_STYLES.halvar16Bold} border-t border-white/20 pt-6 text-center tracking-[0.2em] text-yellow uppercase lg:hidden`}
+        >
+          multi-tasks
+        </p>
       </div>
     </Section>
   )
