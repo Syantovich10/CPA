@@ -68,7 +68,7 @@ function MultiTasks() {
           <div className="flex flex-col justify-between gap-8 rounded-[8px] bg-purple bg-[linear-gradient(65deg,#9500DC_17.61%,#560080_57.18%,#220032_88.56%)]  px-[10px] py-[20px] pb-[0] sm:px-0 sm:py-0 sm:pt-[30px]">
             <IntroText description={data.description} />
 
-            <img src={taskssnake} alt="" className="w-full self-center" />
+            <img src={taskssnake} alt="Illustration of a coiled purple snake with yellow eyes, its tail curled around a sparkling blue diamond gemstone." className="w-full self-center" />
           </div>
 
           <div className="flex flex-col gap-6">
