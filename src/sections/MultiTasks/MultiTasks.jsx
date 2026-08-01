@@ -8,11 +8,11 @@ function FeatureCard({ translationKey }) {
   const { t } = useTranslation()
 
   return (
-    <div className="flex flex-1 flex-col gap-3 rounded-[8px] bg-purple px-[10px] py-[10px] pb-[20px] sm:px-8 sm:py-8">
-      <h3 className={`${HEADING_STYLES.h2} text-yellow uppercase`}>
+    <div className="flex flex-1 flex-col gap-[10px] rounded-[8px] bg-purple px-[10px] py-[10px] pb-[20px]">
+      <h3 className={`${HEADING_STYLES.h3} text-yellow uppercase`}>
         {t(`multiTasks.features.${translationKey}.title`)}
       </h3>
-      <p className={`${TEXT_STYLES.stolzl16Light} text-white/70`}>
+      <p className={`${TEXT_STYLES.stolzl20Regular} text-white lg:text-white/70`}>
         {t(`multiTasks.features.${translationKey}.description`)}
       </p>
     </div>
@@ -25,7 +25,7 @@ function MultiTasks() {
 
   return (
     <Section id="multi-tasks" className="bg-dark lg:pb-[125px]">
-      <div className="mx-auto flex w-full max-w-[1440px] flex-col gap-8">
+      <div className="mx-auto flex w-full max-w-[500px] lg:max-w-[1440px] flex-col gap-6 lg:gap-[60px]">
         <h2
           className={`${TEXT_STYLES.halvar32Bold} hidden self-end text-yellow uppercase lg:block`}
         >
@@ -33,9 +33,9 @@ function MultiTasks() {
         </h2>
 
         <div className="grid grid-cols-1 gap-6 lg:grid-cols-[1.5fr_1fr_1fr] lg:items-stretch">
-          <div className="flex flex-col justify-between gap-8 rounded-[8px] bg-purple bg-[linear-gradient(65deg,#9500DC_17.61%,#560080_57.18%,#220032_88.56%)]  px-[10px] py-[20px] pb-[0] sm:px-8 sm:py-8">
+          <div className="flex flex-col justify-between gap-8 rounded-[8px] bg-purple bg-[linear-gradient(65deg,#9500DC_17.61%,#560080_57.18%,#220032_88.56%)]  px-[10px] py-[20px] pb-[0] sm:px-0 sm:py-0 sm:pt-[30px]">
             <p
-              className={`${TEXT_STYLES.halvar20Bold} max-w-[420px] text-white`}
+              className={`${TEXT_STYLES.halvar20Bold} text-white sm:px-[38px]`}
             >
               {t('multiTasks.introBefore')}
               <span className="text-yellow">
@@ -47,7 +47,7 @@ function MultiTasks() {
             <img
               src={taskssnake}
               alt=""
-              className="w-full max-w-[380px] self-center"
+              className="w-full self-center"
             />
           </div>
 
