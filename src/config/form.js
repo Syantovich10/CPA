@@ -1,3 +1,5 @@
+import { TEXT_STYLES } from '@/config/typography.js'
+
 export const FORM_INPUT_CLASSES = [
   'w-full rounded-2xl border border-purple/30 bg-white px-4 py-3',
   'font-stolzl text-[14px] text-dark placeholder:text-dark/40',
@@ -29,7 +31,7 @@ export const FORM_SUBMIT_BUTTON_CLASSES = [
 ].join(' ')
 
 export const FORM_CLOSE_BUTTON_CLASSES = [
-  'absolute right-6 top-6 font-stolzl text-2xl leading-none text-purple',
+  `absolute right-6 top-6 ${TEXT_STYLES.halvar20Bold} text-purple`,
   'transition-colors hover:text-purple-dark',
   'focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-purple',
 ].join(' ')

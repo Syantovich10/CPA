@@ -47,7 +47,6 @@ i18n.use(initReactI18next).init({
               telegram: 'Telegram',
               whatsapp: 'WhatsApp',
               email: 'Email',
-              phone: 'Phone',
             },
           },
           contact: {
@@ -111,7 +110,6 @@ i18n.use(initReactI18next).init({
               telegram: 'Telegram',
               whatsapp: 'WhatsApp',
               email: 'Email',
-              phone: 'Телефон',
             },
           },
           contact: {

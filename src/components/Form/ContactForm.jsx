@@ -1,3 +1,4 @@
+import { TEXT_STYLES } from '@/config/typography.js'
 import Select from '@/components/Form/Select'
 import { CONTACT_METHODS } from '@/config/contactMethods'
 import {
@@ -20,7 +21,7 @@ function ContactForm({ onSubmit, isLoading, submitError }) {
     mode: 'onBlur',
     defaultValues: {
       name: '',
-      contactMethod: '',
+      method: '',
       contact: '',
     },
   })
@@ -38,7 +39,7 @@ function ContactForm({ onSubmit, isLoading, submitError }) {
       noValidate
       className="flex flex-col gap-5"
     >
-      <p className="font-stolzl text-[14px] text-dark/70">
+      <p className={`${TEXT_STYLES.stolzl14Light} text-dark/70`}>
         {t('form.mandatoryNote.before')}
         <span className="text-purple">*</span>
         {t('form.mandatoryNote.after')}
@@ -60,7 +61,7 @@ function ContactForm({ onSubmit, isLoading, submitError }) {
       <div className="flex flex-col gap-5 sm:flex-row">
         <div className="sm:w-1/2">
           <Controller
-            name="contactMethod"
+            name="method"
             control={control}
             rules={{ required: t('form.contactMethod.error') }}
             render={({ field }) => (
