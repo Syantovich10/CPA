@@ -73,7 +73,7 @@ function ContactForm({ onSubmit, isLoading, submitError }) {
                 required
                 placeholder={t('form.contactMethod.label')}
                 options={contactMethodOptions}
-                error={errors.contactMethod?.message}
+                error={errors.method?.message}
               />
             )}
           />
@@ -90,7 +90,7 @@ function ContactForm({ onSubmit, isLoading, submitError }) {
             {...register('contact', { required: t('form.contact.error') })}
           />
           {!contactValue && (
-            <span className="pointer-events-none absolute inset-y-0 left-4 flex items-center font-stolzl text-[14px] text-dark/40">
+            <span className="pointer-events-none absolute top-3 left-4 flex items-center font-stolzl text-[14px] text-dark/40">
               {t('form.contact.label')}
               <span className="ml-0.5 text-purple">*</span>
             </span>

@@ -88,7 +88,7 @@ function Select({
         aria-expanded={isOpen}
         className={FORM_SELECT_BUTTON_CLASSES}
       >
-        <span className={selectedOption ? 'text-dark' : 'text-dark/40'}>
+        <span className="font-light text-dark">
           {selectedOption ? (
             selectedOption.label
           ) : (

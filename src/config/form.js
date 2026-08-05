@@ -2,7 +2,7 @@ import { TEXT_STYLES } from '@/config/typography.js'
 
 export const FORM_INPUT_CLASSES = [
   'w-full rounded-2xl border border-purple/30 bg-white px-4 py-3',
-  'font-stolzl text-[14px] text-dark placeholder:text-dark/40',
+  'font-stolzl text-[14px] text-dark placeholder:text-dark placeholder:font-light',
   'transition-colors focus:border-purple focus:outline-none',
 ].join(' ')
 

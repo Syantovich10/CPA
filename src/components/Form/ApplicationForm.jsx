@@ -20,7 +20,7 @@ function ApplicationForm({ onClose }) {
         X
       </button>
 
-      <img src={snakeIcon} alt="" className="mx-auto mb-10 w-auto" />
+      <img src={snakeIcon} alt="Purple head of a cartoon snake" className="mx-auto mb-10 w-auto" />
 
       {isSuccess ? (
         <FormSuccess onDone={() => onClose?.()} />
