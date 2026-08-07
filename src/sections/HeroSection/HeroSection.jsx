@@ -1,39 +1,17 @@
-import instagramIcon from '@/assets/icons/insticon.svg'
-import linkedinIcon from '@/assets/icons/linkedicon.svg'
-import telegramIcon from '@/assets/icons/telegicon.svg'
 import desktopBackground from '@/assets/img/dekstopbg/dekstopbgone.png'
 import desktopSnake from '@/assets/img/hero-snake-desktop.png'
 import mobileSnake from '@/assets/img/hero-snake-mobile.png'
 import mobileBackground from '@/assets/img/mobilebg/mobilebgone.png'
 import ThreeDButton from '@/components/Button/ThreeDButton'
+import { SOCIAL_LINKS } from '@/config/socialLinks'
 import { HEADING_STYLES, TEXT_STYLES } from '@/config/typography'
-import HeaderSection from '@/sections/HeaderSection/HeaderSection'
 import { useTranslation } from 'react-i18next'
-
-const SOCIAL_LINKS = [
-  {
-    label: 'Instagram',
-    href: 'https://www.instagram.com/',
-    icon: instagramIcon,
-  },
-  {
-    label: 'Telegram',
-    href: 'https://telegram.org/',
-    icon: telegramIcon,
-  },
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/',
-    icon: linkedinIcon,
-  },
-]
 
 function HeroSection() {
   const { t } = useTranslation()
 
   return (
     <section
-      id="main"
       aria-labelledby="hero-title"
       className="relative isolate flex min-h-dvh flex-col overflow-hidden text-white"
     >
@@ -45,8 +23,6 @@ function HeroSection() {
           className="h-full w-full object-cover"
         />
       </picture>
-
-      <HeaderSection />
 
       <div className="relative flex flex-1 flex-col px-[14px] pt-[70px] lg:grid lg:grid-cols-[minmax(470px,0.9fr)_minmax(0,1.1fr)] lg:grid-rows-[1fr_auto] lg:px-[50px] lg:pt-[120px] lg:pb-[50px] xl:grid-cols-[minmax(560px,0.9fr)_minmax(0,1.1fr)]">
         <div className="z-10 lg:self-center">

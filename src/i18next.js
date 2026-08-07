@@ -32,6 +32,9 @@ i18n.use(initReactI18next).init({
           business: 'launch now',
           partners: 'partner up',
         },
+        footer: {
+          scrollTop: 'scroll to top',
+        },
       },
     },
 
@@ -63,6 +66,9 @@ i18n.use(initReactI18next).init({
           mediaBuyers: 'в команду',
           business: 'запустить проект',
           partners: 'стать партнёром',
+        },
+        footer: {
+          scrollTop: 'наверх',
         },
       },
     },

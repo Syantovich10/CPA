@@ -1,28 +1,7 @@
-import instagramIcon from '@/assets/icons/insticon.svg'
-import linkedinIcon from '@/assets/icons/linkedicon.svg'
-import telegramIcon from '@/assets/icons/telegicon.svg'
 import { MOBILE_NAV_ITEMS } from '@/config/navigation'
+import { SOCIAL_LINKS } from '@/config/socialLinks'
 import { TEXT_STYLES } from '@/config/typography'
 import { useTranslation } from 'react-i18next'
-
-const SOCIAL_LINKS = [
-  {
-    label: 'Instagram',
-    href: 'https://www.instagram.com/',
-    icon: instagramIcon,
-  },
-  {
-    label: 'Telegram',
-    href: 'https://telegram.org/',
-    icon: telegramIcon,
-  },
-  {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/',
-    icon: linkedinIcon,
-  },
-]
-
 function MobileMenu({ currentLanguage, onChangeLanguage, onClose }) {
   const { t } = useTranslation()
 
@@ -30,13 +9,13 @@ function MobileMenu({ currentLanguage, onChangeLanguage, onClose }) {
     `underline-offset-4 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white ${
       currentLanguage === language
         ? 'text-white no-underline'
-        : 'text-yellow underline decoration-yellow hover:text-white hover:decoration-white'
+        : 'text-yellow underline decoration-yellow hover:text-white hover:decoration-white focus-visible:text-white focus-visible:decoration-white'
     }`
 
   return (
     <div
       id="mobile-menu"
-      className="flex min-h-0 w-full flex-1 overflow-y-auto lg:hidden"
+      className="flex min-h-0 w-full flex-1 overflow-y-auto px-[10px] md:hidden"
     >
       <div className="my-auto flex w-full flex-col items-center py-[30px] text-center">
         <nav aria-label={t('accessibility.mainNavigation')}>
@@ -48,7 +27,7 @@ function MobileMenu({ currentLanguage, onChangeLanguage, onClose }) {
                 <a
                   href={href}
                   onClick={onClose}
-                  className="underline decoration-yellow underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+                  className="underline decoration-yellow underline-offset-4 transition-colors hover:text-white hover:decoration-white focus-visible:text-white focus-visible:decoration-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
                 >
                   {t(`nav.${translationKey}`)}
                 </a>
