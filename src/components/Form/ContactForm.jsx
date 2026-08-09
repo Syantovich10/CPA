@@ -1,12 +1,11 @@
 import { TEXT_STYLES } from '@/config/typography.js'
-import Select from '@/components/Form/Select'
-import { CONTACT_METHODS } from '@/config/contactMethods'
+import ContactMethodField from '@/components/Form/ContactMethodField'
 import {
   FORM_ERROR_CLASSES,
   FORM_INPUT_CLASSES,
   FORM_SUBMIT_BUTTON_CLASSES,
 } from '@/config/form'
-import { Controller, useForm } from 'react-hook-form'
+import { useForm } from 'react-hook-form'
 import { useTranslation } from 'react-i18next'
 
 function ContactForm({ onSubmit, isLoading, submitError }) {
@@ -27,11 +26,6 @@ function ContactForm({ onSubmit, isLoading, submitError }) {
   })
 
   const contactValue = watch('contact')
-
-  const contactMethodOptions = CONTACT_METHODS.map((method) => ({
-    value: method.value,
-    label: t(`form.contactMethod.options.${method.translationKey}`),
-  }))
 
   return (
     <form
@@ -60,22 +54,9 @@ function ContactForm({ onSubmit, isLoading, submitError }) {
 
       <div className="flex flex-col gap-5 sm:flex-row">
         <div className="sm:w-1/2">
-          <Controller
-            name="method"
+          <ContactMethodField
             control={control}
-            rules={{ required: t('form.contactMethod.error') }}
-            render={({ field }) => (
-              <Select
-                id="contactMethod"
-                value={field.value}
-                onChange={field.onChange}
-                onBlur={field.onBlur}
-                required
-                placeholder={t('form.contactMethod.label')}
-                options={contactMethodOptions}
-                error={errors.method?.message}
-              />
-            )}
+            error={errors.method?.message}
           />
         </div>
 
