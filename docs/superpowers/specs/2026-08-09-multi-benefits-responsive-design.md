@@ -6,9 +6,9 @@ Bring the `multi-benefits` section in line with the supplied mobile and desktop 
 
 ## Responsive behavior
 
-- The mobile layout is visible below Tailwind's `md` breakpoint (`< 768px`).
-- The desktop layout is visible from `md` upward (`>= 768px`).
-- The two layouts use separate responsive wrappers: `md:hidden` for mobile and `hidden md:block` for desktop.
+- The mobile layout is visible below Tailwind's `lg` breakpoint (`< 1024px`).
+- The desktop layout is visible from `lg` upward (`>= 1024px`).
+- The two layouts use separate responsive wrappers: `lg:hidden` for mobile and `hidden lg:block` for desktop.
 - API data and small presentational pieces remain shared so the two layouts do not duplicate data-fetching logic.
 
 ## Mobile layout
@@ -35,7 +35,8 @@ The static ribbon spans the full content width below the three-column compositio
 ## Data, loading, and accessibility
 
 - Content continues to come from `getBenefits` through `useApiData`.
-- Rendering remains guarded until data is available, consistent with the current implementation.
+- While data is loading, the existing `Spinner` is centered inside the full-viewport `Section`, keeping the page height stable.
+- If loading finishes without data, the section renders nothing, preserving the current error behavior.
 - Benefit list items receive stable React keys based on their content and index.
 - The decorative snake image receives descriptive alternative text unless it is marked decorative by the final composition.
 
@@ -43,5 +44,5 @@ The static ribbon spans the full content width below the three-column compositio
 
 - Add an automated source-level breakpoint/layout regression check if the existing project test setup permits it without introducing a new test framework solely for this section.
 - Run lint, formatting checks, and the production build.
-- Use Playwright to inspect the section below `md`, at `767px`, at `768px`, and at a representative desktop width.
+- Use Playwright to inspect the section below `lg`, at `1023px`, at `1024px`, and at a representative desktop width.
 - Confirm only one responsive layout is visible at each width and that there is no unintended horizontal page overflow.
