@@ -25,8 +25,6 @@ function ContactForm({ onSubmit, isLoading, submitError }) {
     },
   })
 
-  const contactValue = watch('contact')
-
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
@@ -67,15 +65,14 @@ function ContactForm({ onSubmit, isLoading, submitError }) {
           <input
             id="contact"
             type="text"
-            className={FORM_INPUT_CLASSES}
+            placeholder=" "
+            className={`${FORM_INPUT_CLASSES} peer`}
             {...register('contact', { required: t('form.contact.error') })}
           />
-          {!contactValue && (
-            <span className="pointer-events-none absolute top-3 left-4 flex items-center font-stolzl text-[14px] text-dark/40">
-              {t('form.contact.label')}
-              <span className="ml-0.5 text-purple">*</span>
-            </span>
-          )}
+          <span className="pointer-events-none absolute top-3 left-4 flex items-center font-stolzl text-[14px] text-dark/40 peer-focus:hidden peer-[:not(:placeholder-shown)]:hidden">
+            {t('form.contact.label')}
+            <span className="ml-0.5 text-purple">*</span>
+          </span>
           {errors.contact && (
             <p className={FORM_ERROR_CLASSES}>{errors.contact.message}</p>
           )}
