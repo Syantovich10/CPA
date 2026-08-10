@@ -18,7 +18,7 @@ function Footer() {
   const underlinedLinkClass = `${linkClass} underline`
 
   return (
-    <footer className="hidden md:block">
+    <footer className="hidden md:block bg-dark">
       <div
         className="
           mx-auto
@@ -30,8 +30,7 @@ function Footer() {
           px-4
           py-6
           sm:px-8
-          lg:px-4
-          xl:px-16
+          lg:px-16
         "
       >
         <div className="flex items-center gap-4 sm:gap-6 lg:gap-8">

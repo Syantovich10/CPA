@@ -28,9 +28,6 @@ i18n.use(initReactI18next).init({
           business: 'launch now',
           partners: 'partner up',
         },
-        multiBenefits: {
-          loadError: 'Unable to load this section. Please try again later.',
-        },
         multiply: {
           loadError: 'Unable to load this section. Please try again later.',
         },
@@ -97,9 +94,6 @@ i18n.use(initReactI18next).init({
           business: 'запустить проект',
           partners: 'стать партнёром',
         },
-        multiBenefits: {
-          loadError: 'Не удалось загрузить секцию. Попробуйте позже.',
-        },
         multiply: {
           loadError: 'Не удалось загрузить секцию. Попробуйте позже.',
         },
@@ -136,18 +130,6 @@ i18n.use(initReactI18next).init({
             description: 'Мы обработаем ваш запрос и свяжемся с вами',
             done: 'Готово',
           },
-        },
-      },
-    },
-    ua: {
-      translation: {
-        multiplyButtons: {
-          mediaBuyers: 'в команду',
-          business: 'запустити проєкт',
-          partners: 'стати партнером',
-        },
-        multiply: {
-          loadError: 'Не вдалося завантажити секцію. Спробуйте пізніше.',
         },
       },
     },
