@@ -15,8 +15,8 @@ function MultiplyWithUs({ onApply }) {
   const { data, isLoading, error } = useApiData(getMultiply)
   const [activeIndex, setActiveIndex] = useState(0)
   const items = Array.isArray(data) ? data.slice(0, 3) : []
-  const contentIndex = activeIndex === 1 ? 2 : activeIndex === 2 ? 1 : 0
-  const activeItem = items[contentIndex]
+  const orderedItems = items.length === 3 ? [items[0], items[2], items[1]] : items
+  const activeItem = orderedItems[activeIndex]
   const ctaKey =
     activeIndex === 1
       ? 'partners'
@@ -56,7 +56,7 @@ function MultiplyWithUs({ onApply }) {
                 aria-label="Multiply with us"
                 className="flex w-full flex-col gap-4 lg:gap-7"
               >
-                {items.map(({ title }, index) => (
+                {orderedItems.map(({ title }, index) => (
                   <AudienceSwitchButton
                     key={title}
                     id={index}

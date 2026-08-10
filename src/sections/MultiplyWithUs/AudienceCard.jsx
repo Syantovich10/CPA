@@ -43,7 +43,7 @@ function AudienceCard({ tabId, firstStep, secondStep, ctaLabel, onApply }) {
       <ThreeDButton
         type="button"
         onClick={onApply}
-        className={TEXT_STYLES.halvar24Bold + `h-[68px] w-full max-w-[423px] px-5 text-[14px] sm:text-[18px] lg:h-[85px]`}
+        className={TEXT_STYLES.halvar24Bold + ` h-[68px] w-full max-w-[423px] px-5 text-[14px] sm:text-[18px] lg:h-[85px]`}
       >
         {ctaLabel}
       </ThreeDButton>
