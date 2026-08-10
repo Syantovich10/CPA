@@ -21,7 +21,7 @@ function MultiBenefits() {
         </div>
       ) : error || !data ? (
         <div className="flex min-h-dvh items-center justify-center px-5 text-center font-halvar text-[20px] font-bold text-white">
-          {t('multiBenefits.loadError')}
+          {t('multiply.loadError')}
         </div>
       ) : (
         <>
