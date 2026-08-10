@@ -95,8 +95,11 @@ function MultiplyWithUs({ onApply }) {
         )}
       </div>
 
-      <div className="absolute inset-x-0 bottom-0 z-20 hidden lg:block lg:pl-[40%]">
-        <Footer />
+      <div className="absolute inset-x-0 bottom-0 z-20 hidden lg:block lg:px-[50px]">
+        <div className="mx-auto grid w-full max-w-[1440px] lg:grid-cols-[minmax(320px,0.72fr)_minmax(0,1.28fr)] lg:gap-[58px]">
+          <div aria-hidden="true" />
+          <Footer />
+        </div>
       </div>
     </Section>
   )
