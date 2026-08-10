@@ -35,5 +35,7 @@ dist-ssr
 .output/
 output/
 .gemini/
+.playwright-cli/
 .superpowers/
 docs/superpowers/
+docs/superpowers/specs
