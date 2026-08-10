@@ -9,6 +9,7 @@ import AudienceCard from '@/sections/MultiplyWithUs/AudienceCard'
 import AudienceSwitchButton from '@/sections/MultiplyWithUs/AudienceSwitchButton'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import { TEXT_STYLES } from '@/config/typography.js'
 
 function MultiplyWithUs({ onApply }) {
   const { t } = useTranslation()
@@ -75,7 +76,12 @@ function MultiplyWithUs({ onApply }) {
             </div>
 
             <div className="flex min-w-0 flex-col gap-7 lg:gap-10">
-              <h2 className="hidden self-end font-halvar text-[38px] leading-none font-bold text-yellow uppercase lg:block">
+              <h2
+                className={
+                  TEXT_STYLES.halvar32Bold +
+                  'hidden self-end  leading-none font-bold text-yellow uppercase lg:block"'
+                }
+              >
                 multiply with us
               </h2>
 
