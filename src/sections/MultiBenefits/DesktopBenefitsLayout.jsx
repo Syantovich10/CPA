@@ -28,7 +28,7 @@ function DesktopBenefitsLayout({ data }) {
         </h2>
 
         <div className="grid grid-cols-[minmax(0,1.15fr)_minmax(160px,0.75fr)_minmax(0,1fr)] items-center">
-          <div className="relative z-10 max-w-[540px] self-start pt-5">
+          <div className="relative z-10 max-w-[540px] self-start pt-5 lg:-translate-y-[130px]">
             <HighlightedTitle
               title={data.title}
               className={`${TEXT_STYLES.halvar32Bold} leading-[90%] text-white md:text-[32px] lg:text-[42px] xl:text-[50px]`}

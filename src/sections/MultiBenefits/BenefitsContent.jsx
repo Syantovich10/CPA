@@ -47,7 +47,7 @@ export function BenefitsList({ benefits, className = '' }) {
 
 export function BenefitsRibbon({ showIcon = false }) {
   return (
-    <div className="overflow-hidden border-y-2 border-y-yellow whitespace-nowrap">
+    <div className="overflow-hidden border-y-2 border-y-yellow rotate-1 whitespace-nowrap">
       <div
         className={`${TEXT_STYLES.halvar35Light} flex w-max -translate-x-3 items-center gap-8 py-1 text-yellow uppercase md:translate-x-0 md:text-[50px] lg:text-[64px]`}
       >
