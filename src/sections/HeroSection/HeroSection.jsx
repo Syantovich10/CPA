@@ -53,13 +53,13 @@ function HeroSection() {
           </ThreeDButton>
         </div>
 
-        <div className="-mx-[14px] mt-auto flex min-h-0 w-[calc(100%+28px)] flex-1 -translate-y-[70px] justify-center lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mx-0 lg:-ml-[80px] lg:max-h-[calc(100dvh-170px)] lg:w-[calc(100%+80px)] lg:translate-y-0 lg:items-end lg:justify-end xl:-ml-[120px] xl:w-[calc(100%+120px)]">
-          <picture className="flex h-full min-h-0 w-full items-end justify-center lg:justify-end">
+        <div className="-mx-[14px] mt-auto flex min-h-0 w-[calc(100%+28px)] flex-1 -translate-y-[70px] justify-end lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mx-0 lg:-ml-[80px] lg:max-h-[calc(100dvh-170px)] lg:w-[calc(100%+80px)] lg:translate-x-[50px] lg:translate-y-0 lg:items-end xl:-ml-[120px] xl:w-[calc(100%+120px)]">
+          <picture className="flex h-full min-h-0 w-full items-end justify-end">
             <source media="(min-width: 1024px)" srcSet={desktopSnake} />
             <img
               src={mobileSnake}
               alt={t('accessibility.heroSnake')}
-              className="max-h-full w-auto max-w-full object-contain lg:max-h-[calc(100dvh-170px)] lg:object-right-bottom"
+              className="max-h-full w-auto max-w-full object-contain md:h-[min(65dvh,55vw)] md:max-h-none lg:h-auto lg:max-h-[calc(100dvh-170px)] lg:object-right-bottom"
             />
           </picture>
         </div>
