@@ -3,6 +3,7 @@ import desktopSnake from '@/assets/img/hero-snake-desktop.png'
 import mobileSnake from '@/assets/img/hero-snake-mobile.png'
 import mobileBackground from '@/assets/img/mobilebg/mobilebgone.png'
 import ThreeDButton from '@/components/Button/ThreeDButton'
+import Section from '@/components/Section/Section'
 import { SOCIAL_LINKS } from '@/config/socialLinks'
 import { HEADING_STYLES, TEXT_STYLES } from '@/config/typography'
 import { useTranslation } from 'react-i18next'
@@ -11,10 +12,7 @@ function HeroSection() {
   const { t } = useTranslation()
 
   return (
-    <section
-      aria-labelledby="hero-title"
-      className="relative isolate flex min-h-dvh flex-col overflow-hidden text-white"
-    >
+    <Section className="relative isolate overflow-hidden !px-0 !py-0 text-white">
       <picture className="absolute inset-0 -z-20">
         <source media="(min-width: 1024px)" srcSet={desktopBackground} />
         <img
@@ -86,7 +84,7 @@ function HeroSection() {
           ))}
         </ul>
       </div>
-    </section>
+    </Section>
   )
 }
 
