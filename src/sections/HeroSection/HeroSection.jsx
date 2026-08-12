@@ -12,7 +12,7 @@ function HeroSection() {
   const { t } = useTranslation()
 
   return (
-    <Section className="relative isolate overflow-hidden !px-0 !py-0 text-white">
+    <Section className="relative isolate h-[calc(100dvh-44px)] !min-h-[calc(100dvh-44px)] overflow-hidden !px-0 !py-0 text-white md:h-dvh md:!min-h-dvh">
       <picture className="absolute inset-0 -z-20">
         <source media="(min-width: 1024px)" srcSet={desktopBackground} />
         <img
@@ -22,8 +22,8 @@ function HeroSection() {
         />
       </picture>
 
-      <div className="relative flex flex-1 flex-col px-[14px] pt-[70px] lg:grid lg:grid-cols-[minmax(470px,0.9fr)_minmax(0,1.1fr)] lg:grid-rows-[1fr_auto] lg:px-[50px] lg:pt-[120px] lg:pb-[50px] xl:grid-cols-[minmax(560px,0.9fr)_minmax(0,1.1fr)]">
-        <div className="z-10 lg:self-center">
+      <div className="relative flex min-h-0 flex-1 flex-col px-[14px] pt-[70px] md:pt-[150px] lg:grid lg:grid-cols-[minmax(470px,0.9fr)_minmax(0,1.1fr)] lg:grid-rows-[1fr_auto] lg:px-[50px] lg:pt-[120px] lg:pb-[50px] xl:grid-cols-[minmax(560px,0.9fr)_minmax(0,1.1fr)]">
+        <div className="z-10 shrink-0 lg:self-center">
           <h1
             id="hero-title"
             className={`${HEADING_STYLES.h1} uppercase lg:text-[60px] lg:tracking-[-1.74px] xl:text-[80px]`}
@@ -53,13 +53,13 @@ function HeroSection() {
           </ThreeDButton>
         </div>
 
-        <div className="-mx-[14px] mt-auto flex w-[calc(100%+28px)] -translate-y-[70px] justify-center lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mx-0 lg:-ml-[80px] lg:w-[calc(100%+80px)] lg:translate-y-0 lg:items-end lg:justify-end xl:-ml-[120px] xl:w-[calc(100%+120px)]">
-          <picture className="flex w-full justify-center lg:justify-end">
+        <div className="-mx-[14px] mt-auto flex min-h-0 w-[calc(100%+28px)] flex-1 -translate-y-[70px] justify-center lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:mx-0 lg:-ml-[80px] lg:max-h-[calc(100dvh-170px)] lg:w-[calc(100%+80px)] lg:translate-y-0 lg:items-end lg:justify-end xl:-ml-[120px] xl:w-[calc(100%+120px)]">
+          <picture className="flex h-full min-h-0 w-full items-end justify-center lg:justify-end">
             <source media="(min-width: 1024px)" srcSet={desktopSnake} />
             <img
               src={mobileSnake}
               alt={t('accessibility.heroSnake')}
-              className="h-auto w-full object-contain lg:max-h-[calc(100dvh-120px)] lg:object-right-bottom"
+              className="max-h-full w-auto max-w-full object-contain lg:max-h-[calc(100dvh-170px)] lg:object-right-bottom"
             />
           </picture>
         </div>
