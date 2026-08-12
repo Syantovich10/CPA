@@ -23,10 +23,10 @@ function HeroSection() {
       </picture>
 
       <div className="relative flex min-h-0 flex-1 flex-col px-[14px] pt-[70px] md:pt-[150px] lg:grid lg:grid-cols-[minmax(470px,0.9fr)_minmax(0,1.1fr)] lg:grid-rows-[1fr_auto] lg:px-[50px] lg:pt-[120px] lg:pb-[50px] xl:grid-cols-[minmax(560px,0.9fr)_minmax(0,1.1fr)]">
-        <div className="z-10 shrink-0 lg:self-center">
+        <div className="z-10 shrink-0 lg:mt-[58px] lg:self-start">
           <h1
             id="hero-title"
-            className={`${HEADING_STYLES.h1} uppercase lg:text-[60px] lg:tracking-[-1.74px] xl:text-[80px]`}
+            className={`${HEADING_STYLES.h1} uppercase min-[769px]:max-lg:text-[60px] min-[769px]:max-lg:tracking-[-1.74px] lg:text-[60px] lg:tracking-[-1.74px] xl:text-[80px]`}
           >
             <span className="block">{t('hero.titleFirstLine')}</span>
             <span className="block whitespace-nowrap">
@@ -36,13 +36,13 @@ function HeroSection() {
           </h1>
 
           <p
-            className={`${TEXT_STYLES.stolzl20Regular} mt-[12px] max-w-[480px]`}
+            className={`${TEXT_STYLES.stolzl20Regular} mt-[12px] max-w-[531px]`}
           >
             {t('hero.description')}
           </p>
 
           <ThreeDButton
-            className="mt-[30px] h-[52px] w-[210px] text-[13px] lg:h-[85px] lg:w-[423px] lg:text-[16px]"
+            className="mt-[30px] h-[52px] w-[210px] text-[13px] min-[769px]:max-lg:h-[85px] min-[769px]:max-lg:w-[423px] min-[769px]:max-lg:text-[16px] lg:h-[85px] lg:w-[423px] lg:text-[16px]"
             onClick={() => {
               document.querySelector('#join-us')?.scrollIntoView({
                 behavior: 'smooth',
