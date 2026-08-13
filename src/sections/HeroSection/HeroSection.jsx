@@ -26,7 +26,7 @@ function HeroSection() {
         <div className="z-10 shrink-0 lg:mt-[58px] lg:self-start">
           <h1
             id="hero-title"
-            className={`${HEADING_STYLES.h1} uppercase min-[769px]:max-lg:text-[60px] min-[769px]:max-lg:tracking-[-1.74px] lg:text-[60px] lg:tracking-[-1.74px] xl:text-[80px]`}
+            className={`${HEADING_STYLES.h1} uppercase md:text-[60px] md:tracking-[-1.74px] xl:text-[80px]`}
           >
             <span className="block">{t('hero.titleFirstLine')}</span>
             <span className="block whitespace-nowrap">
@@ -42,7 +42,7 @@ function HeroSection() {
           </p>
 
           <ThreeDButton
-            className="mt-[30px] h-[52px] w-[210px] text-[13px] min-[769px]:max-lg:h-[85px] min-[769px]:max-lg:w-[423px] min-[769px]:max-lg:text-[16px] lg:h-[85px] lg:w-[423px] lg:text-[16px]"
+            className="mt-[30px] h-[52px] w-[210px] text-[13px] md:h-[85px] md:w-[423px] md:text-[16px]"
             onClick={() => {
               document.querySelector('#join-us')?.scrollIntoView({
                 behavior: 'smooth',
