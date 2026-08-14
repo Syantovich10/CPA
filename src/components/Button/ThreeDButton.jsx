@@ -15,12 +15,15 @@ const STROKE_PATH =
 const ThreeDButton = ({
   children,
   className = '',
+  href,
   type = 'button',
   ...props
 }) => {
+  const Component = href ? 'a' : 'button'
+
   return (
-    <button
-      type={type}
+    <Component
+      {...(href ? { href } : { type })}
       className={`${BUTTON_CLASSES} ${className}`.trim()}
       {...props}
     >
@@ -42,7 +45,7 @@ const ThreeDButton = ({
         />
       </svg>
       <span className={BUTTON_TEXT_CLASSES}>{children}</span>
-    </button>
+    </Component>
   )
 }
 

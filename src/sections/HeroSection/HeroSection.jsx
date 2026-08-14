@@ -43,11 +43,7 @@ function HeroSection() {
 
           <ThreeDButton
             className="mt-[30px] h-[52px] w-[210px] text-[13px] md:h-[85px] md:w-[423px] md:text-[16px]"
-            onClick={() => {
-              document.querySelector('#join-us')?.scrollIntoView({
-                behavior: 'smooth',
-              })
-            }}
+            href="#join-us"
           >
             {t('hero.button')}
           </ThreeDButton>
