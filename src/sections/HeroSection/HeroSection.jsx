@@ -42,10 +42,10 @@ function HeroSection() {
           </p>
 
           <ThreeDButton
-            className="mt-[30px] h-[52px] w-[210px] text-[13px] md:h-[85px] md:w-[423px] md:text-[16px]"
+            className="mt-[30px] px-4 py-[19px] text-[13px] md:h-[85px] md:w-[423px] md:text-[16px]"
             href="#join-us"
           >
-            {t('hero.button')}
+            <span className="text-[18px] font-bold leading-[normal] tracking-[3.6px] uppercase md:text-[23px] md:tracking-[4.6px]">{t('hero.button')}</span>
           </ThreeDButton>
         </div>
 
