@@ -22,7 +22,7 @@ function HeroSection() {
         />
       </picture>
 
-      <div className="relative flex min-h-0 flex-1 flex-col px-[14px] pt-[70px] md:pt-[150px] lg:grid lg:grid-cols-[minmax(470px,0.9fr)_minmax(0,1.1fr)] lg:grid-rows-[1fr_auto] lg:px-[50px] lg:pt-[120px] lg:pb-[50px] xl:grid-cols-[minmax(560px,0.9fr)_minmax(0,1.1fr)]">
+      <div className="relative flex min-h-0 flex-1 flex-col px-[14px] pt-[100px] md:pt-[150px] lg:grid lg:grid-cols-[minmax(470px,0.9fr)_minmax(0,1.1fr)] lg:grid-rows-[1fr_auto] lg:px-[50px] lg:pt-[120px] lg:pb-[50px] xl:grid-cols-[minmax(560px,0.9fr)_minmax(0,1.1fr)]">
         <div className="z-10 shrink-0 lg:mt-[58px] lg:self-start">
           <h1
             id="hero-title"
@@ -42,10 +42,12 @@ function HeroSection() {
           </p>
 
           <ThreeDButton
-            className="mt-[30px] px-4 py-[19px] text-[13px] md:h-[85px] md:w-[423px] md:text-[16px]"
+            className="mt-[30px] min-w-[250px] px-4 py-[19px] text-[13px] md:h-[85px] md:w-[423px] md:text-[16px]"
             href="#join-us"
           >
-            <span className="text-[18px] font-bold leading-[normal] tracking-[3.6px] uppercase md:text-[23px] md:tracking-[4.6px]">{t('hero.button')}</span>
+            <span className="text-[18px] font-bold leading-[normal] tracking-[3.6px] uppercase md:text-[23px] md:tracking-[4.6px]">
+              {t('hero.button')}
+            </span>
           </ThreeDButton>
         </div>
 
