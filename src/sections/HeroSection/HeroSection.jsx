@@ -26,7 +26,7 @@ function HeroSection() {
         <div className="z-10 shrink-0 lg:mt-[58px] lg:self-start">
           <h1
             id="hero-title"
-            className={`${HEADING_STYLES.h1} uppercase md:text-[60px] md:tracking-[-1.74px] xl:text-[80px]`}
+            className={`${HEADING_STYLES.h1} uppercase md:text-[60px] md:tracking-[-1.74px] xl:text-[80px] short:text-[60px] short:tracking-[-1.307px]`}
           >
             <span className="block">{t('hero.titleFirstLine')}</span>
             <span className="block whitespace-nowrap">
@@ -36,16 +36,16 @@ function HeroSection() {
           </h1>
 
           <p
-            className={`${TEXT_STYLES.stolzl20Regular} mt-[12px] max-w-[531px]`}
+            className={`${TEXT_STYLES.stolzl20Regular} mt-[12px] max-w-[531px] short:text-[16px]`}
           >
             {t('hero.description')}
           </p>
 
           <ThreeDButton
-            className="mt-[30px] min-w-[250px] px-4 py-[19px] text-[13px] md:h-[85px] md:w-[423px] md:text-[16px]"
+            className="mt-[30px] min-w-[250px] px-4 py-[19px] md:px-[31px] text-[13px] md:h-[85px]  md:text-[16px]"
             href="#join-us"
           >
-            <span className="text-[18px] font-bold leading-[normal] tracking-[3.6px] uppercase md:text-[23px] md:tracking-[4.6px]">
+            <span className="text-[18px] font-bold leading-[normal] tracking-[3.6px] uppercase md:text-[23px] md:tracking-[4.6px] short:text-[20px] short:tracking-[4px]">
               {t('hero.button')}
             </span>
           </ThreeDButton>
