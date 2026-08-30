@@ -7,7 +7,6 @@ import ThreeDButton from '@/components/Button/ThreeDButton'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
 
-const SNAKE_ALT = 'Illustration of a coiled purple snake with yellow eyes'
 const NOT_FOUND_TITLE = '404'
 
 function NotFoundPage() {
@@ -40,8 +39,8 @@ function NotFoundPage() {
       </Link>
 
       {/* Mobile / tablet layout, matching the dedicated mobile mockup */}
-      <div className="relative z-10 h-full pt-[90px] px-4 pt-20 pb-10 text-center md:hidden">
-        <div className="flex flex-col leading-[0.8]">
+      <div className="relative z-10 h-full pt-[90px] px-4 pb-10 text-center md:hidden">
+        <h1 className="flex flex-col leading-[0.8]">
           {digits.map((digit, index) => (
             <span
               key={index}
@@ -50,7 +49,7 @@ function NotFoundPage() {
               {digit}
             </span>
           ))}
-        </div>
+        </h1>
 
         <ThreeDButton
           onClick={() => navigate('/')}
@@ -64,20 +63,20 @@ function NotFoundPage() {
 
       <img
         src={snakeIllustrationMobile}
-        alt={SNAKE_ALT}
+        alt={t('accessibility.notFoundSnake')}
         className="absolute bottom-[-139px] right-0 md:hidden"
       />
 
       {/* Desktop layout */}
-      <div className="relative z-10 hidden md:block pt-[213px] h-full">
+      <div className="relative z-10 hidden md:flex h-full flex-col justify-center">
         <h1 className="text-center font-halvar text-[clamp(120px,26.31vw,380px)] leading-[0.9] font-bold tracking-[-2.64px] text-white uppercase">
           {NOT_FOUND_TITLE}
         </h1>
 
         <img
           src={snakeIllustration}
-          alt={SNAKE_ALT}
-          className="absolute bottom-0 left-[0] md:min-w-[500px] lg:min-w-auto w-[37.56vw]"
+          alt={t('accessibility.notFoundSnake')}
+          className="absolute bottom-0 left-[0] md:min-w-[500px] lg:min-w-auto w-[37.56vw] -z-5"
         />
 
         <ThreeDButton

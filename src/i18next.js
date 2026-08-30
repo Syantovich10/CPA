@@ -9,6 +9,8 @@ i18n.use(initReactI18next).init({
       translation: {
         accessibility: {
           home: 'Home',
+          notFoundSnake:
+            'Illustration of a coiled purple snake with yellow eyes',
           openMenu: 'Open menu',
           closeMenu: 'Close menu',
           mainNavigation: 'Main navigation',
@@ -76,6 +78,8 @@ i18n.use(initReactI18next).init({
       translation: {
         accessibility: {
           home: 'На главную',
+          notFoundSnake:
+            'Иллюстрация свернувшейся фиолетовой змеи с жёлтыми глазами',
           openMenu: 'Открыть меню',
           closeMenu: 'Закрыть меню',
           mainNavigation: 'Основная навигация',
