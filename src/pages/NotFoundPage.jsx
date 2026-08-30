@@ -81,7 +81,7 @@ function NotFoundPage() {
 
         <ThreeDButton
           onClick={() => navigate('/')}
-          className="h-[82px] w-[420px] mx-auto !block mt-16"
+          className="h-[82px] w-[420px] mx-auto mt-16"
         >
           <span className="text-[23px] font-bold leading-[normal] tracking-[4.6px]">
             {t('notFound.button')}
