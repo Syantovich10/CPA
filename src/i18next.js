@@ -1,12 +1,16 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
+const LANGUAGE_STORAGE_KEY = 'lang'
+
 i18n.use(initReactI18next).init({
   resources: {
     en: {
       translation: {
         accessibility: {
           home: 'Home',
+          notFoundSnake:
+            'Illustration of a coiled purple snake with yellow eyes',
           heroSnake: 'Purple snake',
           openMenu: 'Open menu',
           closeMenu: 'Close menu',
@@ -34,6 +38,10 @@ i18n.use(initReactI18next).init({
         },
         footer: {
           scrollTop: 'scroll to top',
+        },
+        notFound: {
+          button: 'Oops, take me back',
+          mobile: { button: 'take me back' },
         },
         form: {
           close: 'Close form',
@@ -74,6 +82,8 @@ i18n.use(initReactI18next).init({
       translation: {
         accessibility: {
           home: 'На главную',
+          notFoundSnake:
+            'Иллюстрация свернувшейся фиолетовой змеи с жёлтыми глазами',
           heroSnake: 'Фиолетовая змея',
           openMenu: 'Открыть меню',
           closeMenu: 'Закрыть меню',
@@ -101,6 +111,10 @@ i18n.use(initReactI18next).init({
         },
         footer: {
           scrollTop: 'наверх',
+        },
+        notFound: {
+          button: 'Ой, верните меня назад',
+          mobile: { button: 'верните меня назад' },
         },
         form: {
           close: 'Закрыть форму',
@@ -137,12 +151,16 @@ i18n.use(initReactI18next).init({
     },
   },
 
-  lng: 'ru',
-  fallbackLng: 'en',
+  lng: localStorage.getItem(LANGUAGE_STORAGE_KEY) ?? 'en',
+  fallbackLng: 'ru',
 
   interpolation: {
     escapeValue: false,
   },
+})
+
+i18n.on('languageChanged', (language) => {
+  localStorage.setItem(LANGUAGE_STORAGE_KEY, language)
 })
 
 export default i18n
