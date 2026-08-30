@@ -2,7 +2,6 @@ import { MOBILE_NAV_ITEMS } from '@/config/navigation'
 import { SOCIAL_LINKS } from '@/config/socialLinks'
 import { TEXT_STYLES } from '@/config/typography'
 import { useTranslation } from 'react-i18next'
-
 function MobileMenu({ currentLanguage, onChangeLanguage, onClose }) {
   const { t } = useTranslation()
 

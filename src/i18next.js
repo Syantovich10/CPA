@@ -7,12 +7,16 @@ i18n.use(initReactI18next).init({
       translation: {
         accessibility: {
           home: 'Home',
+          heroSnake: 'Purple snake',
           openMenu: 'Open menu',
           closeMenu: 'Close menu',
           mainNavigation: 'Main navigation',
           languageSelection: 'Language selection',
         },
         hero: {
+          titleFirstLine: 'Practice',
+          titleSecondLine: 'makes',
+          titleAccent: 'profit',
           description:
             'We provide effective solutions, tested and refined on our own products and ad budgets',
           button: 'get in touch',
@@ -70,12 +74,16 @@ i18n.use(initReactI18next).init({
       translation: {
         accessibility: {
           home: 'На главную',
+          heroSnake: 'Фиолетовая змея',
           openMenu: 'Открыть меню',
           closeMenu: 'Закрыть меню',
           mainNavigation: 'Основная навигация',
           languageSelection: 'Выбор языка',
         },
         hero: {
+          titleFirstLine: 'Practice',
+          titleSecondLine: 'makes',
+          titleAccent: 'profit',
           description:
             'Предлагаем эффективные решения, которые уже протестили на своих продуктах и бюджетах',
           button: 'получить профит',
