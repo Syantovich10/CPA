@@ -12,15 +12,10 @@ const FILL_PATH =
 const STROKE_PATH =
   'M421.25 1.25V77.5855L406.73 83.25H1.25V9.85855L21.2683 1.25H421.25ZM1.25 9.85855C1.25 9.85855 306.431 9.85855 406.73 9.85855M406.73 83.25C406.73 83.25 406.73 39.3007 406.73 9.85855M406.73 9.85855L421.25 1.25'
 
-const ThreeDButton = ({
-  children,
-  className = '',
-  type = 'button',
-  ...props
-}) => {
+const ThreeDButton = ({ children, className = '', href, ...props }) => {
   return (
-    <button
-      type={type}
+    <a
+      href={href}
       className={`${BUTTON_CLASSES} ${className}`.trim()}
       {...props}
     >
@@ -42,7 +37,7 @@ const ThreeDButton = ({
         />
       </svg>
       <span className={BUTTON_TEXT_CLASSES}>{children}</span>
-    </button>
+    </a>
   )
 }
 

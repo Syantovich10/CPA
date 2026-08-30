@@ -29,7 +29,8 @@ export const TEXT_STYLES = {
 
   stolzl16Light: 'font-stolzl text-[16px] font-light',
 
-  stolzl20Regular: 'font-stolzl text-[20px] leading-[24px] font-normal',
+  stolzl20Regular:
+    'font-stolzl text-[16px] md:text-[20px] leading-[24px] font-normal',
 
   text20Regular: 'text-[20px] leading-[24px] font-normal',
 }
