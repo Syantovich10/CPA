@@ -94,7 +94,7 @@ function MultiplyWithUs({ onApply }) {
               <h2
                 className={
                   TEXT_STYLES.halvar32Bold +
-                  ' hidden self-end leading-none font-bold text-yellow uppercase lg:block"'
+                  ' hidden self-end leading-none font-bold text-yellow uppercase lg:block'
                 }
               >
                 multiply with us
