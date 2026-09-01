@@ -2,7 +2,7 @@ import ApplicationForm from '@/components/Form/ApplicationForm'
 import Header from '@/components/Header/Header'
 import Modal from '@/components/Modal/Modal'
 import MultiTasks from '@/sections/MultiTasks/MultiTasks'
-import MultiplyWithUs from '@/sections/MultiplyWithUs/MultiplyWithUs.jsx'
+import MultiplyWithUs from '@/sections/MultiplyWithUs/MultiplyWithUs'
 import { useState } from 'react'
 
 function HomePage() {

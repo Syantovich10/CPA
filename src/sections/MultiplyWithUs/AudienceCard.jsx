@@ -26,15 +26,17 @@ function AudienceCard({ tabId, firstStep, secondStep, ctaLabel, onApply }) {
       id="multiply-audience-panel"
       role="tabpanel"
       aria-labelledby={`multiply-tab-${tabId}`}
-      className="flex min-h-[610px] w-full flex-col items-center justify-center gap-6 rounded-[14px] bg-[linear-gradient(145deg,#B900FF_0%,#9600DF_100%)] px-5 py-12 text-center text-white sm:px-10 lg:min-h-[620px] lg:gap-7 lg:px-[70px] lg:py-[60px]"
+      className="flex min-h-[610px] w-full flex-col items-center justify-center gap-6 rounded-[14px] bg-[linear-gradient(145deg,#B900FF_0%,#9600DF_100%)] px-5 py-12 text-center text-white sm:px-10 lg:min-h-[620px] lg:gap-7 lg:px-[98px] lg:py-[60px]"
     >
-      <p className="max-w-[760px] font-halvar text-[18px] leading-[1.25] font-bold sm:text-[22px] lg:text-[26px]">
+      <p
+        className={`max-w-[760px] font-halvar text-[18px] leading-[1.25] font-bold sm:text-[20px]`}
+      >
         {firstStep}
       </p>
 
       <DownArrow />
 
-      <p className="max-w-[780px] font-halvar text-[18px] leading-[1.25] font-bold sm:text-[22px] lg:text-[26px]">
+      <p className="max-w-[780px] font-halvar text-[18px] leading-[1.25] font-bold sm:text-[20px]">
         {secondStep}
       </p>
 
@@ -43,7 +45,10 @@ function AudienceCard({ tabId, firstStep, secondStep, ctaLabel, onApply }) {
       <ThreeDButton
         type="button"
         onClick={onApply}
-        className={TEXT_STYLES.halvar24Bold + ` h-[68px] w-full max-w-[423px] px-5 text-[14px] sm:text-[18px] lg:h-[85px]`}
+        className={
+          TEXT_STYLES.halvar24Bold +
+          ` h-[68px] w-full max-w-[423px] px-5 text-[14px] sm:text-[18px] lg:h-[85px]`
+        }
       >
         {ctaLabel}
       </ThreeDButton>

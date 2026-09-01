@@ -11,19 +11,31 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { TEXT_STYLES } from '@/config/typography.js'
 
+const EXPECTED_CATEGORY_COUNT = 3
+
+function getCtaKey(activeIndex) {
+  switch (activeIndex) {
+    case 1:
+      return 'partners'
+    case 2:
+      return 'business'
+    default:
+      return 'mediaBuyers'
+  }
+}
+
 function MultiplyWithUs({ onApply }) {
   const { t } = useTranslation()
   const { data, isLoading, error } = useApiData(getMultiply)
   const [activeIndex, setActiveIndex] = useState(0)
-  const items = Array.isArray(data) ? data.slice(0, 3) : []
-  const orderedItems = items.length === 3 ? [items[0], items[2], items[1]] : items
-  const activeItem = orderedItems[activeIndex]
-  const ctaKey =
-    activeIndex === 1
-      ? 'partners'
-      : activeIndex === 2
-        ? 'business'
-        : 'mediaBuyers'
+  const items = Array.isArray(data)
+    ? data.slice(0, EXPECTED_CATEGORY_COUNT)
+    : []
+  const activeItem = items[activeIndex]
+  const ctaKey = getCtaKey(activeIndex)
+  const hasError = Boolean(
+    error || items.length < EXPECTED_CATEGORY_COUNT || !activeItem?.steps,
+  )
 
   return (
     <Section
@@ -45,25 +57,28 @@ function MultiplyWithUs({ onApply }) {
           <div className="flex min-h-[620px] items-center justify-center">
             <Spinner />
           </div>
-        ) : error || items.length < 3 || !activeItem?.steps ? (
+        ) : hasError ? (
           <div className="flex min-h-[620px] items-center justify-center px-5 text-center font-halvar text-[20px] font-bold text-white">
             {t('multiply.loadError')}
           </div>
         ) : (
-          <div className="grid grid-cols-1 gap-7 lg:grid-cols-[minmax(320px,0.72fr)_minmax(0,1.28fr)] lg:gap-[58px]">
+          <div className="grid grid-cols-1 gap-7 lg:grid-cols-[minmax(400px,0.82fr)_minmax(0,1.18fr)] lg:gap-[58px]">
             <div className="flex min-w-0 flex-col gap-8 lg:justify-between lg:gap-10 lg:pt-[78px]">
               <div
                 role="tablist"
                 aria-label="Multiply with us"
-                className="flex w-full flex-col gap-4 lg:gap-7"
+                className="flex flex-col gap-4 lg:gap-7"
               >
-                {orderedItems.map(({ title }, index) => (
+                {items.map(({ title }, index) => (
                   <AudienceSwitchButton
                     key={title}
                     id={index}
                     label={title}
                     isActive={index === activeIndex}
                     onSelect={setActiveIndex}
+                    maxWidth={
+                      index === 1 ? '486px' : index === 2 ? '435px' : ''
+                    }
                   />
                 ))}
               </div>
