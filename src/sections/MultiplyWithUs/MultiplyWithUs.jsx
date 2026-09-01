@@ -52,7 +52,7 @@ function MultiplyWithUs({ onApply }) {
         style={{ backgroundImage: `url(${yellowGrid})` }}
       />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[500px] flex-col lg:max-w-[1440px]">
+      <div className="z-10 mx-auto flex w-full max-w-[500px] flex-col lg:max-w-[1440px]">
         {isLoading ? (
           <div className="flex min-h-[620px] items-center justify-center">
             <Spinner />
@@ -63,11 +63,11 @@ function MultiplyWithUs({ onApply }) {
           </div>
         ) : (
           <div className="grid grid-cols-1 gap-7 lg:grid-cols-[minmax(400px,0.82fr)_minmax(0,1.18fr)] lg:gap-[58px]">
-            <div className="flex min-w-0 flex-col gap-8 lg:justify-between lg:gap-10 lg:pt-[78px]">
+            <div className="flex min-w-0 flex-col gap-8 lg:justify-between lg:gap-10">
               <div
                 role="tablist"
                 aria-label="Multiply with us"
-                className="flex flex-col gap-4 lg:gap-7"
+                className="flex flex-col items-center lg:items-start gap-4 lg:gap-7"
               >
                 {items.map(({ title }, index) => (
                   <AudienceSwitchButton
@@ -86,7 +86,7 @@ function MultiplyWithUs({ onApply }) {
               <img
                 src={multiplySnake}
                 alt=""
-                className="hidden w-full max-w-[560px] translate-y-[134px] self-center object-contain lg:block"
+                className="hidden absolute bottom-0 w-full max-w-[560px] self-center object-contain lg:block"
               />
             </div>
 
@@ -94,7 +94,7 @@ function MultiplyWithUs({ onApply }) {
               <h2
                 className={
                   TEXT_STYLES.halvar32Bold +
-                  'hidden self-end  leading-none font-bold text-yellow uppercase lg:block"'
+                  ' hidden self-end leading-none font-bold text-yellow uppercase lg:block"'
                 }
               >
                 multiply with us
@@ -117,7 +117,7 @@ function MultiplyWithUs({ onApply }) {
       </div>
 
       <div className="absolute inset-x-0 bottom-0 z-20 hidden lg:block lg:px-[50px]">
-        <div className="mx-auto grid w-full max-w-[1440px] lg:grid-cols-[minmax(320px,0.72fr)_minmax(0,1.28fr)] lg:gap-[58px]">
+        <div className="mx-auto grid w-full max-w-[1440px] lg:grid-cols-[minmax(400px,0.82fr)_minmax(0,1.18fr)] lg:gap-[58px]">
           <div aria-hidden="true" />
           <Footer />
         </div>
