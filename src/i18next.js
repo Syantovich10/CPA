@@ -36,6 +36,9 @@ i18n.use(initReactI18next).init({
           business: 'launch now',
           partners: 'partner up',
         },
+        multiply: {
+          loadError: 'Unable to load this section. Please try again later.',
+        },
         footer: {
           scrollTop: 'scroll to top',
         },
