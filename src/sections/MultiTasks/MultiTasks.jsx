@@ -4,7 +4,7 @@ import Section from '@/components/Section/Section'
 import Spinner from '@/components/Spinner/Spinner'
 import { TEXT_STYLES } from '@/config/typography'
 import useApiData from '@/hooks/useApiData'
-import FeatureCard from '@/sections/MultiTasks/FeatureCard'
+import FeatureCard from '@/components/Card/FeatureCard.jsx'
 import IntroText from '@/sections/MultiTasks/IntroText'
 
 function MultiTasks() {
