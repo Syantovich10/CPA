@@ -2,6 +2,9 @@
 export default {
   theme: {
     extend: {
+      screens: {
+        short: { raw: '(min-width: 768px) and (max-height: 700px)' },
+      },
       colors: {
         dark: '#0C090E',
         white: '#FFFFFF',

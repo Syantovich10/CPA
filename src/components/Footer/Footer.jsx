@@ -8,6 +8,7 @@ function Footer() {
 
   const linkClass = `
     ${TEXT_STYLES.halvar20Bold}
+    text-[clamp(16px,calc(6.154px+0.962vw),20px)]
     text-yellow
     uppercase
     whitespace-nowrap
@@ -18,7 +19,7 @@ function Footer() {
   const underlinedLinkClass = `${linkClass} underline`
 
   return (
-    <footer className="hidden md:block bg-dark">
+    <footer className="hidden md:block">
       <div
         className="
           mx-auto
@@ -27,10 +28,9 @@ function Footer() {
           max-w-[1440px]
           items-center
           justify-between
-          px-4
           py-6
-          sm:px-8
-          lg:px-16
+          pl-[10px]
+          gap-6
         "
       >
         <div className="flex items-center gap-4 sm:gap-6 lg:gap-8">

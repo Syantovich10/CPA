@@ -43,7 +43,6 @@ function Header() {
       desktopMedia.removeEventListener('change', handleBreakpointChange)
     }
   }, [isOpen])
-
   useEffect(() => {
     if (!isOpen) {
       return undefined
