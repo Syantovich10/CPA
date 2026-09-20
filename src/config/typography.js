@@ -9,6 +9,8 @@ export const HEADING_STYLES = {
 
 export const TEXT_STYLES = {
   halvar14Medium: 'font-halvar text-[14px] font-medium',
+  
+  halvar16Medium: 'font-halvar text-[16px] leading-[20px] font-medium',
 
   halvar16Bold: 'font-halvar text-[16px] leading-[20px] font-bold',
 

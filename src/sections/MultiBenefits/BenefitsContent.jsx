@@ -1,5 +1,5 @@
 import yellowSnakeIcon from '@/assets/icons/yellowsnakeicon.svg'
-import FeatureCard from '@/components/Card/FeatureCard.jsx'
+import BenefitsCard from '@/sections/MultiBenefits/BenefitsCard.jsx'
 import { TEXT_STYLES } from '@/config/typography.js'
 
 const TITLE_HIGHLIGHTS = [
@@ -39,7 +39,7 @@ export function BenefitsList({ benefits, className = '' }) {
   return (
     <div className={`flex flex-col ${className}`.trim()}>
       {benefits.map((benefit, index) => (
-        <FeatureCard key={index} title="" text={benefit} />
+        <BenefitsCard key={index} text={benefit} />
       ))}
     </div>
   )

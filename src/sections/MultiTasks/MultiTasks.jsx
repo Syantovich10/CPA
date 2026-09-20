@@ -18,7 +18,7 @@ function MultiTasks() {
   const thirdColumn = data.tiles.slice(2)
 
   return (
-    <Section id="team" className="bg-purple-dark lg:pb-[125px]">
+    <Section id="team" className="bg-purple-dark pb-[20px] sm:pb-[60px] lg:pb-[125px]">
       <div className="mx-auto flex w-full max-w-[500px] flex-col gap-6 lg:max-w-[1440px] lg:gap-[60px]">
         <h2
           className={`${TEXT_STYLES.halvar32Bold} hidden self-end text-yellow uppercase lg:block`}
