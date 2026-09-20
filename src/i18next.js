@@ -112,6 +112,9 @@ i18n.use(initReactI18next).init({
           business: 'запустить проект',
           partners: 'стать партнёром',
         },
+        multiply: {
+          loadError: 'Не удалось загрузить секцию. Попробуйте позже.',
+        },
         footer: {
           scrollTop: 'наверх',
         },

@@ -1,4 +1,4 @@
-import { HEADING_STYLES, TEXT_STYLES } from '@/config/typography'
+import { HEADING_STYLES, TEXT_STYLES } from '@/config/typography.js'
 
 function FeatureCard({ title, text }) {
   return (

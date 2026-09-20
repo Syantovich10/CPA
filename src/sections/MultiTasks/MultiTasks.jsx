@@ -4,7 +4,7 @@ import Section from '@/components/Section/Section'
 import Spinner from '@/components/Spinner/Spinner'
 import { TEXT_STYLES } from '@/config/typography'
 import useApiData from '@/hooks/useApiData'
-import FeatureCard from '@/sections/MultiTasks/FeatureCard'
+import FeatureCard from '@/components/Card/FeatureCard.jsx'
 import IntroText from '@/sections/MultiTasks/IntroText'
 
 function MultiTasks() {
@@ -18,7 +18,7 @@ function MultiTasks() {
   const thirdColumn = data.tiles.slice(2)
 
   return (
-    <Section id="team" className="bg-purple-dark lg:pb-[125px]">
+    <Section id="team" className="bg-purple-dark pb-[20px] sm:pb-[60px] lg:pb-[125px]">
       <div className="mx-auto flex w-full max-w-[500px] flex-col gap-6 lg:max-w-[1440px] lg:gap-[60px]">
         <h2
           className={`${TEXT_STYLES.halvar32Bold} hidden self-end text-yellow uppercase lg:block`}
