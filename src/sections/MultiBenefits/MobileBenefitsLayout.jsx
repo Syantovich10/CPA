@@ -1,10 +1,13 @@
-import mobileBackground from '@/assets/img/mobilebg/mobilebgfive.png'
+import HighlightedText from '@/components/HighlightedText/HighlightedText'
+import SectionEyebrow from '@/components/SectionEyebrow/SectionEyebrow'
+import { TITLE_HIGHLIGHTS } from '@/config/highlights.js'
 import { TEXT_STYLES } from '@/config/typography.js'
 import {
   BenefitsList,
   BenefitsRibbon,
-  HighlightedTitle,
 } from '@/sections/MultiBenefits/BenefitsContent.jsx'
+
+const EYEBROW_TEXT = 'multi-benefits'
 
 function MobileBenefitsLayout({ data }) {
   return (
@@ -12,16 +15,11 @@ function MobileBenefitsLayout({ data }) {
       data-layout="mobile"
       className="relative min-h-dvh overflow-hidden lg:hidden"
     >
-      <img
-        src={mobileBackground}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover"
-      />
-
       <div className="relative mx-auto flex min-h-dvh w-full max-w-[500px] flex-col justify-center px-4 py-[60px]">
-        <HighlightedTitle
-          title={data.title}
+        <HighlightedText
+          as="h2"
+          text={data.title}
+          highlights={TITLE_HIGHLIGHTS}
           className={`${TEXT_STYLES.halvar32Bold} leading-[90%] text-white`}
         />
 
@@ -36,6 +34,8 @@ function MobileBenefitsLayout({ data }) {
         </div>
 
         <BenefitsList benefits={data.benefits} className="mt-7 gap-4" />
+
+        <SectionEyebrow text={EYEBROW_TEXT} variant="mobile" className="mt-8" />
       </div>
     </div>
   )

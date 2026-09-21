@@ -13,6 +13,8 @@ i18n.use(initReactI18next).init({
           notFoundSnake:
             'Illustration of a coiled purple snake with yellow eyes',
           heroSnake: 'Purple snake',
+          taskSnake:
+            'Illustration of a coiled purple snake with yellow eyes, its tail curled around a sparkling blue diamond gemstone.',
           openMenu: 'Open menu',
           closeMenu: 'Close menu',
           mainNavigation: 'Main navigation',
@@ -89,6 +91,8 @@ i18n.use(initReactI18next).init({
           notFoundSnake:
             'Иллюстрация свернувшейся фиолетовой змеи с жёлтыми глазами',
           heroSnake: 'Фиолетовая змея',
+          taskSnake:
+            'Иллюстрация свернувшейся фиолетовой змеи с жёлтыми глазами, хвост которой обвивает сверкающий синий бриллиант.',
           openMenu: 'Открыть меню',
           closeMenu: 'Закрыть меню',
           mainNavigation: 'Основная навигация',

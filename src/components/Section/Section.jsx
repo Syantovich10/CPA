@@ -1,10 +1,33 @@
-function Section({ id, className = '', children }) {
+import {
+  SECTION_CONTAINER_CLASSES,
+  SECTION_MIN_HEIGHT,
+  SECTION_PADDING,
+} from '@/config/section'
+
+function Section({
+  id,
+  padding = 'default',
+  minHeight = 'screen',
+  background,
+  contentClassName,
+  className = '',
+  children,
+}) {
   return (
     <section
       id={id}
-      className={`flex min-h-dvh flex-col justify-center px-4 py-[60px] lg:px-[50px] ${className}`.trim()}
+      className={`relative flex flex-col justify-center ${SECTION_MIN_HEIGHT[minHeight]} ${SECTION_PADDING[padding]} ${className}`.trim()}
     >
-      {children}
+      {background}
+      {contentClassName ? (
+        <div
+          className={`${SECTION_CONTAINER_CLASSES} ${contentClassName}`.trim()}
+        >
+          {children}
+        </div>
+      ) : (
+        children
+      )}
     </section>
   )
 }

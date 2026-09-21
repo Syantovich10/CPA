@@ -1,45 +1,14 @@
 import yellowSnakeIcon from '@/assets/icons/yellowsnakeicon.svg'
-import BenefitsCard from '@/sections/MultiBenefits/BenefitsCard.jsx'
+import Card from '@/components/Card/Card'
 import { TEXT_STYLES } from '@/config/typography.js'
 
-const TITLE_HIGHLIGHTS = [
-  'guaranteed',
-  'гарантировать',
-  'гарантированы',
-  'гарантувати',
-  'гарантовані',
-]
 const RIBBON_TEXT = 'dream big earn bigger!'
-
-export function HighlightedTitle({ title, className }) {
-  const normalizedTitle = title.toLowerCase()
-  const highlight = TITLE_HIGHLIGHTS.find((word) =>
-    normalizedTitle.includes(word),
-  )
-
-  if (!highlight) {
-    return <h2 className={className}>{title}</h2>
-  }
-
-  const highlightIndex = normalizedTitle.indexOf(highlight)
-  const highlightEnd = highlightIndex + highlight.length
-
-  return (
-    <h2 className={className}>
-      {title.slice(0, highlightIndex)}
-      <span className="text-yellow">
-        {title.slice(highlightIndex, highlightEnd)}
-      </span>
-      {title.slice(highlightEnd)}
-    </h2>
-  )
-}
 
 export function BenefitsList({ benefits, className = '' }) {
   return (
     <div className={`flex flex-col ${className}`.trim()}>
       {benefits.map((benefit, index) => (
-        <BenefitsCard key={index} text={benefit} />
+        <Card key={index} text={benefit} padding="spacious" />
       ))}
     </div>
   )
