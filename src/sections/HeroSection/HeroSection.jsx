@@ -13,7 +13,7 @@ function HeroSection() {
 
   return (
     <Section className="relative isolate h-[calc(100dvh-44px)] !min-h-[calc(100dvh-44px)] overflow-hidden !px-0 !py-0 text-white md:h-dvh md:!min-h-dvh">
-      <picture className="absolute inset-0 -z-20">
+      <picture className="absolute inset-0 -z-5">
         <source media="(min-width: 1024px)" srcSet={desktopBackground} />
         <img
           src={mobileBackground}
@@ -22,7 +22,7 @@ function HeroSection() {
         />
       </picture>
 
-      <div className="relative flex min-h-0 flex-1 flex-col px-[14px] pt-[100px] md:pt-[150px] lg:grid lg:grid-cols-[minmax(470px,0.9fr)_minmax(0,1.1fr)] lg:grid-rows-[1fr_auto] lg:px-[50px] lg:pt-[120px] lg:pb-[50px] xl:grid-cols-[minmax(560px,0.9fr)_minmax(0,1.1fr)]">
+      <div className="mx-auto w-full lg:max-w-[1440px] relative flex min-h-0 flex-1 flex-col px-[14px] pt-[100px] md:pt-[150px] lg:grid lg:grid-cols-[minmax(470px,0.9fr)_minmax(0,1.1fr)] lg:grid-rows-[1fr_auto] lg:px-[50px] lg:pt-[120px] lg:pb-[50px] xl:grid-cols-[minmax(560px,0.9fr)_minmax(0,1.1fr)]">
         <div className="z-10 shrink-0 lg:mt-[58px] lg:self-start">
           <h1
             id="hero-title"
