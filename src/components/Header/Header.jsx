@@ -3,9 +3,17 @@ import MobileMenu from '@/components/Header/MobileMenu'
 import { NAV_ITEMS } from '@/config/navigation'
 import { TEXT_STYLES } from '@/config/typography'
 import useBodyScrollLock from '@/hooks/useBodyScrollLock'
+import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/i18next'
 import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Link } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
+
+const NON_DEFAULT_LANGUAGES = SUPPORTED_LANGUAGES.filter(
+  (lang) => lang !== DEFAULT_LANGUAGE,
+)
+const LOCALE_PATH_PATTERN = new RegExp(
+  `^/(${NON_DEFAULT_LANGUAGES.join('|')})(?=/|$)`,
+)
 
 function Header() {
   const { t, i18n } = useTranslation()
@@ -13,6 +21,8 @@ function Header() {
   const currentLanguage = i18n.resolvedLanguage ?? i18n.language
   const headerRef = useRef(null)
   const menuButtonRef = useRef(null)
+  const navigate = useNavigate()
+  const location = useLocation()
 
   useBodyScrollLock(isOpen)
 
@@ -92,7 +102,14 @@ function Header() {
   }, [isOpen])
 
   const changeLanguage = (language) => {
-    void i18n.changeLanguage(language)
+    const pathWithoutLocale =
+      location.pathname.replace(LOCALE_PATH_PATTERN, '') || '/'
+    const newPath =
+      language === DEFAULT_LANGUAGE
+        ? pathWithoutLocale
+        : `/${language}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`
+
+    navigate(`${newPath}${location.search}${location.hash}`)
   }
 
   const handleMenuToggle = () => {
