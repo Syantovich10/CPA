@@ -1,67 +1,73 @@
 import { getTasks } from '@/api/endpoints'
 import taskssnake from '@/assets/img/taskssnake.png'
+import AsyncSection from '@/components/AsyncSection/AsyncSection'
+import Card from '@/components/Card/Card'
+import DecorativeArt from '@/components/DecorativeArt/DecorativeArt'
+import HighlightedText from '@/components/HighlightedText/HighlightedText'
 import Section from '@/components/Section/Section'
-import Spinner from '@/components/Spinner/Spinner'
+import SectionEyebrow from '@/components/SectionEyebrow/SectionEyebrow'
+import { INTRO_HIGHLIGHTS } from '@/config/highlights'
 import { TEXT_STYLES } from '@/config/typography'
 import useApiData from '@/hooks/useApiData'
-import FeatureCard from '@/components/Card/FeatureCard.jsx'
-import IntroText from '@/sections/MultiTasks/IntroText'
+import { useTranslation } from 'react-i18next'
+
+const EYEBROW_TEXT = 'multi-tasks'
 
 function MultiTasks() {
-  const { data, isLoading } = useApiData(getTasks)
-
-  if (!data) {
-    return null
-  }
-
-  const secondColumn = data.tiles.slice(0, 2)
-  const thirdColumn = data.tiles.slice(2)
+  const { t } = useTranslation()
+  const { data, isLoading, error } = useApiData(getTasks)
 
   return (
-    <Section id="team" className="bg-purple-dark pb-[20px] sm:pb-[60px] lg:pb-[125px]">
-      <div className="mx-auto flex w-full max-w-[500px] flex-col gap-6 lg:max-w-[1440px] lg:gap-[60px]">
-        <h2
-          className={`${TEXT_STYLES.halvar32Bold} hidden self-end text-yellow uppercase lg:block`}
-        >
-          multi-tasks
-        </h2>
+    <Section
+      id="team"
+      className="bg-purple-dark pb-[20px] sm:pb-[60px] lg:pb-[125px]"
+      contentClassName="gap-6 lg:gap-[60px]"
+    >
+      <SectionEyebrow text={EYEBROW_TEXT} />
 
-        {isLoading ? (
-          <div className="flex min-h-[300px] items-center justify-center">
-            <Spinner />
-          </div>
-        ) : (
-          <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)_minmax(0,1fr)] lg:items-stretch">
-            <div className="flex flex-col justify-between gap-8 rounded-[8px] bg-purple bg-[linear-gradient(65deg,#9500DC_17.61%,#560080_57.18%,#220032_88.56%)]  px-[10px] py-[20px] pb-[0] sm:px-0 sm:py-0 sm:pt-[30px]">
-              <IntroText description={data.description} />
+      <AsyncSection
+        isLoading={isLoading}
+        error={error}
+        data={data}
+        minHeight="min-h-[300px]"
+      >
+        {(data) => {
+          const secondColumn = data.tiles.slice(0, 2)
+          const thirdColumn = data.tiles.slice(2)
 
-              <img
-                src={taskssnake}
-                alt="Illustration of a coiled purple snake with yellow eyes, its tail curled around a sparkling blue diamond gemstone."
-                className="w-full self-center"
-              />
+          return (
+            <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)_minmax(0,1fr)] lg:items-stretch">
+              <div className="flex flex-col justify-between gap-8 rounded-[8px] bg-purple bg-[linear-gradient(65deg,#9500DC_17.61%,#560080_57.18%,#220032_88.56%)] px-[10px] py-[20px] pb-[0] sm:px-0 sm:py-0 sm:pt-[30px]">
+                <HighlightedText
+                  text={data.description}
+                  highlights={INTRO_HIGHLIGHTS}
+                  className={`${TEXT_STYLES.halvar20Bold} text-white sm:px-[38px]`}
+                />
+
+                <DecorativeArt
+                  src={taskssnake}
+                  alt={t('accessibility.taskSnake')}
+                  className="w-full self-center"
+                />
+              </div>
+
+              <div className="flex flex-col gap-6">
+                {secondColumn.map((tile, index) => (
+                  <Card key={index} title={tile.title} text={tile.text} />
+                ))}
+              </div>
+
+              <div className="flex flex-col gap-6">
+                {thirdColumn.map((tile, index) => (
+                  <Card key={index} title={tile.title} text={tile.text} />
+                ))}
+              </div>
             </div>
+          )
+        }}
+      </AsyncSection>
 
-            <div className="flex flex-col gap-6">
-              {secondColumn.map((tile, index) => (
-                <FeatureCard key={index} title={tile.title} text={tile.text} />
-              ))}
-            </div>
-
-            <div className="flex flex-col gap-6">
-              {thirdColumn.map((tile, index) => (
-                <FeatureCard key={index} title={tile.title} text={tile.text} />
-              ))}
-            </div>
-          </div>
-        )}
-
-        <h2
-          className={`${TEXT_STYLES.halvar16Bold} border-t border-white/20 pt-6 text-center tracking-[0.2em] text-yellow uppercase lg:hidden`}
-        >
-          multi-tasks
-        </h2>
-      </div>
+      <SectionEyebrow text={EYEBROW_TEXT} variant="mobile" />
     </Section>
   )
 }

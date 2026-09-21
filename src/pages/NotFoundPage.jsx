@@ -4,6 +4,9 @@ import snakeIllustration from '@/assets/img/notfound-snake.png'
 import snakeIllustrationMobile from '@/assets/img/notfound-snake-mobile.png'
 import logoMobile from '@/assets/logo/logo-mobile.svg'
 import ThreeDButton from '@/components/Button/ThreeDButton'
+import DecorativeArt from '@/components/DecorativeArt/DecorativeArt'
+import ResponsiveBackground from '@/components/ResponsiveBackground/ResponsiveBackground'
+import Section from '@/components/Section/Section'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
 
@@ -15,21 +18,17 @@ function NotFoundPage() {
   const digits = NOT_FOUND_TITLE.split('')
 
   return (
-    <section className="min-h-dvh h-dvh">
-      {/* Backgrounds are static placeholders for now — animation comes later, same as other sections */}
-      <img
-        src={bgMobile}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 h-full w-full object-cover md:hidden"
-      />
-      <img
-        src={bgDesktop}
-        alt=""
-        aria-hidden="true"
-        className="absolute inset-0 hidden h-full w-full object-cover md:block"
-      />
-
+    <Section
+      padding="none"
+      className="h-dvh overflow-hidden"
+      background={
+        <ResponsiveBackground
+          desktopSrc={bgDesktop}
+          mobileSrc={bgMobile}
+          breakpoint={768}
+        />
+      }
+    >
       <Link
         to="/"
         aria-label={t('accessibility.home')}
@@ -61,7 +60,7 @@ function NotFoundPage() {
         </ThreeDButton>
       </div>
 
-      <img
+      <DecorativeArt
         src={snakeIllustrationMobile}
         alt={t('accessibility.notFoundSnake')}
         className="absolute bottom-[-139px] right-0 md:hidden"
@@ -73,7 +72,7 @@ function NotFoundPage() {
           {NOT_FOUND_TITLE}
         </h1>
 
-        <img
+        <DecorativeArt
           src={snakeIllustration}
           alt={t('accessibility.notFoundSnake')}
           className="absolute bottom-0 left-[0] md:min-w-[500px] lg:min-w-auto w-[37.56vw] -z-5"
@@ -88,7 +87,7 @@ function NotFoundPage() {
           </span>
         </ThreeDButton>
       </div>
-    </section>
+    </Section>
   )
 }
 
