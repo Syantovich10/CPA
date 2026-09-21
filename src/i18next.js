@@ -1,7 +1,8 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
 
-const LANGUAGE_STORAGE_KEY = 'lang'
+export const DEFAULT_LANGUAGE = 'en'
+export const SUPPORTED_LANGUAGES = ['en', 'ru']
 
 i18n.use(initReactI18next).init({
   resources: {
@@ -157,16 +158,12 @@ i18n.use(initReactI18next).init({
     },
   },
 
-  lng: localStorage.getItem(LANGUAGE_STORAGE_KEY) ?? 'en',
-  fallbackLng: 'ru',
+  lng: DEFAULT_LANGUAGE,
+  fallbackLng: DEFAULT_LANGUAGE,
 
   interpolation: {
     escapeValue: false,
   },
-})
-
-i18n.on('languageChanged', (language) => {
-  localStorage.setItem(LANGUAGE_STORAGE_KEY, language)
 })
 
 export default i18n

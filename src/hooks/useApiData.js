@@ -1,14 +1,12 @@
+import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '@/i18next'
 import { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-
-const SUPPORTED_LANGUAGES = ['ru', 'en', 'ua']
-const FALLBACK_LANGUAGE = 'en'
 
 function useApiData(fetcher) {
   const { i18n } = useTranslation()
   const lang = SUPPORTED_LANGUAGES.includes(i18n.language)
     ? i18n.language
-    : FALLBACK_LANGUAGE
+    : DEFAULT_LANGUAGE
 
   const [data, setData] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
