@@ -127,10 +127,10 @@ function Header() {
       role={isOpen ? 'dialog' : undefined}
       aria-modal={isOpen || undefined}
       aria-label={isOpen ? t('accessibility.mainNavigation') : undefined}
-      className={`bg-purple-dark px-[10px] py-[10px] ${
+      className={`bg-purple-dark px-[16px] py-[16px] ${
         isOpen
           ? 'fixed inset-0 z-50 flex h-dvh flex-col overflow-y-auto'
-          : 'flex items-center justify-between'
+          : 'sticky top-0 z-50 flex items-center justify-between'
       } md:absolute md:inset-x-0 md:top-0 md:z-50 md:flex md:h-auto md:w-full md:flex-row md:items-center md:justify-between md:overflow-visible md:bg-transparent md:px-[50px] md:py-[30px]`}
     >
       <div className="flex w-full items-center justify-between">

@@ -27,21 +27,21 @@ function DesktopBenefitsLayout({ data }) {
           multi-benefits
         </h2>
 
-        <div className="grid grid-cols-[minmax(0,1.21fr)_minmax(0,.79fr)] gap-[30px] items-center">
+        <div className="grid grid-cols-[minmax(0,1.15fr)_minmax(0,.85fr)] gap-[30px] items-center">
           <div className="relative z-10 self-start">
             <HighlightedTitle
               title={data.title}
-              className={`${TEXT_STYLES.halvar32Bold} leading-[90%] text-white md:text-[32px] lg:text-[42px] xl:text-[50px]`}
+              className={`${TEXT_STYLES.halvar32Bold} leading-[90%] text-white md:text-[32px] lg:text-[42px] xl:text-[50px] max-w-[690px]`}
             />
 
             <p
-              className={`${TEXT_STYLES.halvar16Medium} mt-5 max-w-[563px] leading-[20px] text-white lg:text-[18px] lg:leading-[22px]`}
+              className={`${TEXT_STYLES.halvar16Medium} mt-5 max-w-[490px] leading-[20px] text-white lg:text-[18px] lg:leading-[22px]`}
             >
               {data.description}
             </p>
           </div>
 
-          <div className="absolute z-20 flex h-full min-h-[300px] items-center justify-center left-[47%] top-[473.094px] -translate-x-[50%] -translate-y-[50%]">
+          <div className="absolute z-20 flex h-full min-h-[300px] items-center justify-center left-[44%] top-[502px] -translate-x-[50%] -translate-y-[50%]">
             <img
               src={benefitsSnake}
               alt=""
