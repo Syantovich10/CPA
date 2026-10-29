@@ -39,3 +39,6 @@ output/
 .superpowers/
 docs/superpowers/
 docs/superpowers/specs
+
+# Task Description Files
+Task.md
