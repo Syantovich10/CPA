@@ -16,7 +16,7 @@ function Section({
   return (
     <section
       id={id}
-      className={`relative flex flex-col justify-center ${SECTION_MIN_HEIGHT[minHeight]} ${SECTION_PADDING[padding]} ${className}`.trim()}
+      className={`relative flex flex-col justify-center lg:snap-start lg:snap-always ${SECTION_MIN_HEIGHT[minHeight]} ${SECTION_PADDING[padding]} ${className}`.trim()}
     >
       {background}
       {contentClassName ? (
